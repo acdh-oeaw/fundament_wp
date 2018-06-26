@@ -32,28 +32,41 @@ if ( ! function_exists( 'fundament_wp_scripts' ) ) {
 	 * Function to load the selected Google fonts.
 	 */
   function fundament_wp_google_fonts() {
+
+    $google_fonts = false;
+    $fonts_embed = array();
+
     $fonts_body = get_theme_mod( 'typography_body', array() );
     if ($fonts_body) {
       $font_body_family = $fonts_body['font-family'];
       $font_body_variant = $fonts_body['variant'];
-      $fonts_embed[] = $font_body_family . ':' . $font_body_variant;
-    } else { $fonts_embed[] = 'Asap:400'; }
+      if ($font_body_family != "inherit") {
+        $fonts_embed[] = $font_body_family . ':' . $font_body_variant;
+        $google_fonts = true;
+      }
+    }
 
     $fonts_heading = get_theme_mod( 'typography_heading', array() );
     if ($fonts_heading) {
       $font_heading_family = $fonts_heading['font-family'];
       $font_heading_variant = $fonts_heading['variant'];
-      $fonts_embed[] = $font_heading_family . ':' . $font_heading_variant;
-    } else { $fonts_embed[] = 'Asap:600'; }
+      if ($font_heading_family != "inherit") {
+        $fonts_embed[] = $font_heading_family . ':' . $font_heading_variant;
+        $google_fonts = true;
+      }
+    }
 
     $fonts_article = get_theme_mod( 'typography_article', array() );
     if ($fonts_article) {
       $font_article_family = $fonts_article['font-family'];
       $font_article_variant = $fonts_article['variant'];
-      $fonts_embed[] = $font_article_family . ':' . $font_article_variant . ',italic,bold';
-    } else { $fonts_embed[] = 'Lora:regular,italic,bold'; }
+      if ($font_article_family != "inherit") {
+        $fonts_embed[] = $font_article_family . ':' . $font_article_variant . ',italic,bold';
+        $google_fonts = true;
+      }
+    }
 
-    if ($fonts_embed) {
+    if ($fonts_embed && $google_fonts) {
 
     	$query_args = array(
     	  'family' => urlencode( implode( '|', $fonts_embed ) ),

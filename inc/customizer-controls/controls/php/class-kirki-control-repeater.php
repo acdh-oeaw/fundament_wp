@@ -247,7 +247,26 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 				<div class="repeater-row-content">
 					<# _.each( data, function( field, i ) { #>
 
-						<div class="repeater-field repeater-field-{{{ field.type }}}">
+            <# if (field.required !== undefined) {  #>
+              <# var requirement = field.required[0]; var valid = 1;  #>
+              <# var requirementSetting = requirement.setting; var requirementValue = requirement.value; var requirementOperator = requirement.operator; var requiredClass = 'required-field'+Math.random().toString(36).slice(2)
+; #>
+              <# if (requirementSetting && requirementValue && requirementOperator) { #>
+                <# var controllerValue = data[requirementSetting].default; #>
+                <# if (requirementOperator == '==') { valid = controllerValue != requirementValue ? 0 : 1; } #>
+                <# if (requirementOperator == 'contains') { valid = -1 == jQuery.inArray(controllerValue, requirementValue) ? 0 : 1; } #>
+                <#
+                  $(document).on('change','select[data-field="'+requirementSetting+'"]',function() {
+                    controllerValue = $(this).val();
+                    if (requirementOperator == '==') { valid = controllerValue != requirementValue ? 0 : 1; }
+                    if (requirementOperator == 'contains') { valid = -1 == jQuery.inArray(controllerValue, requirementValue) ? 0 : 1; }
+                    if (valid == 1) { $('.'+requiredClass).show(); }
+                    if (valid == 0) { $('.'+requiredClass).hide(); }
+                  });
+                #>
+              <# } #>
+            <# } #>
+						<div class="repeater-field repeater-field-{{{ field.type }}} {{{ requiredClass }}}" <# if ( valid != undefined && valid != 1 ) { #>style="display:none" <# } #>>
 
 							<# if ( 'text' === field.type || 'url' === field.type || 'link' === field.type || 'email' === field.type || 'tel' === field.type || 'date' === field.type || 'number' === field.type ) { #>
 								<# var fieldExtras = ''; #>

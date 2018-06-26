@@ -1,5 +1,10 @@
 <?php
 
+// Define the KIRKI_VERSION constant.
+if ( ! defined( 'KIRKI_VERSION' ) ) {
+	define( 'KIRKI_VERSION', '3.0.24' );
+}
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -19,19 +24,6 @@ Kirki::add_config(
 	'fundament_wp_options', array(
 		'capability'  => 'edit_theme_options',
 		'option_type' => 'theme_mod',
-	)
-);
-
-/**
- * Add a panel.
- *
- * @link https://aristath.github.io/kirki/docs/getting-started/panels.html
- */
-Kirki::add_panel(
-	'fundament_wp_options_panel', array(
-		'priority'    => 10,
-		'title'       => esc_attr__( 'Theme Options', 'fundament_wp' ),
-		'description' => esc_attr__( 'Contains all controls related to this theme.', 'fundament_wp' ),
 	)
 );
 
@@ -57,7 +49,6 @@ foreach ( $sections as $section_id => $section ) {
 	$section_args = array(
 		'title'       => $section[0],
 		'description' => $section[1],
-		'panel'       => 'fundament_wp_options_panel',
 	);
 	if ( isset( $section[2] ) ) {
 		$section_args['type'] = $section[2];
@@ -233,8 +224,8 @@ my_config_kirki_add_field(
 		'description' => esc_attr__( 'Define the padding of your top navigation bar.', 'fundament_wp' ),
 		'section'     => 'navbar_section',
 		'default'     => array(
-			'padding-top'    => '0.5rem',
-			'padding-bottom' => '0.5rem',
+			'padding-top'    => '1.25rem',
+			'padding-bottom' => '1.25rem',
 		),
     'output'    => array(
     	array(
@@ -1416,10 +1407,30 @@ my_config_kirki_add_field(
   		'value' => esc_attr__('Content Block', 'fundament_wp' )
   	),
 		'fields' => array(
+			'blocks_type' => array(
+				'type'        => 'select',
+				'label'       => esc_attr__( 'Content Block Type', 'fundament_wp' ),
+				'description' => esc_attr__( 'Select the type of your content block.', 'fundament_wp' ),
+				'default'     => 'cards-query-posts',
+				'choices'     => array(
+					'cards-query-posts'         => esc_attr__( 'Card Items: Query Posts', 'fundament_wp' ),
+					'cards-query-pages'    => esc_attr__( 'Card Items: Query Pages', 'fundament_wp' ),
+					'carousel-query-posts'    => esc_attr__( 'Carousel: Query Posts', 'fundament_wp' ),
+					'carousel-query-pages'    => esc_attr__( 'Carousel: Query Pages', 'fundament_wp' ),
+					'shortcode-block'    => esc_attr__( 'Shortcode Block', 'fundament_wp' ),
+				)
+			),
 			'block_title' => array(
 				'type'        => 'text',
 				'label'       => esc_attr__( 'Content Block Title', 'fundament_wp' ),
 				'description' => esc_attr__( 'This will be the heading above your content block. Leave empty for no heading.', 'fundament_wp' ),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages'),
+            )
+        ),
 			),
 			'blocks_per_row' => array(
 				'type'        => 'select',
@@ -1432,13 +1443,27 @@ my_config_kirki_add_field(
 					'col-md-4'   => esc_attr__( '3', 'fundament_wp' ),
 					'col-md-3'   => esc_attr__( '4', 'fundament_wp' ),
 					'col-md-2'   => esc_attr__( '6', 'fundament_wp' )
-				)
+				),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages'),
+            )
+        ),
 			),
 			'number_of_blocks' => array(
 				'type'        => 'text',
 				'label'       => esc_attr__( 'Total Number of Blocks', 'fundament_wp' ),
 				'description' => esc_attr__( 'Set max limit for items or leave empty to display all (limited to 1000).', 'fundament_wp' ),
-				'default'     => '12'
+				'default'     => '12',
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages', 'carousel-query-posts', 'carousel-query-pages'),
+            )
+        ),
 			),
 			'blocks_layout_type' => array(
 				'type'        => 'select',
@@ -1452,27 +1477,55 @@ my_config_kirki_add_field(
 					'card-image-overlay'   => esc_attr__( 'Cards with Image Overlay', 'fundament_wp' ),
 					'card-no-image'   => esc_attr__( 'Cards with no Image', 'fundament_wp' )
 				),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages'),
+            )
+        ),
 			),
 			'blocks_post_category_query' => array(
 				'type'        => 'select',
 				'label'       => esc_attr__( 'Select Categories to Query', 'fundament_wp' ),
 				'description' => esc_attr__( 'You may select multiple categories to query your content from.', 'fundament_wp' ),
     		'multiple'    => 12,
-    		'choices'     => $category_choices
+    		'choices'     => $category_choices,
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'carousel-query-posts'),
+            )
+        ),
 			),
 			'blocks_post_tags_query' => array(
 				'type'        => 'select',
 				'label'       => esc_attr__( 'Select Tags to Query', 'fundament_wp' ),
 				'description' => esc_attr__( 'You may select multiple tags to query your content from.', 'fundament_wp' ),
     		'multiple'    => 12,
-    		'choices'     => $tag_choices
+    		'choices'     => $tag_choices,
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'carousel-query-posts'),
+            )
+        ),
 			),
 			'blocks_post_pages_query' => array(
 				'type'        => 'select',
 				'label'       => esc_attr__( 'Select Specific Pages to Query', 'fundament_wp' ),
 				'description' => esc_attr__( 'If you select pages, then the category and tag queries will be ignored.', 'fundament_wp' ),
     		'multiple'    => 12,
-    		'choices'     => $page_choices
+    		'choices'     => $page_choices,
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-pages', 'carousel-query-pages'),
+            )
+        ),
 			),
 			'blocks_orderby' => array(
 				'type'        => 'select',
@@ -1491,6 +1544,13 @@ my_config_kirki_add_field(
 					'meta_value'   => esc_attr__( 'Meta Value', 'fundament_wp' ),
 					'meta_value_num'   => esc_attr__( 'Numeric Meta Value', 'fundament_wp' )
 				),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages', 'carousel-query-posts', 'carousel-query-pages'),
+            )
+        ),
 			),
 			'blocks_order' => array(
 				'type'        => 'select',
@@ -1500,14 +1560,73 @@ my_config_kirki_add_field(
 				'choices'     => array(
   				'DESC'   => esc_attr__( 'Descending (highest to lowest)', 'fundament_wp' ),
   				'ASC'   => esc_attr__( 'Ascending (lowest to highest)', 'fundament_wp' )
-				)
+				),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages', 'carousel-query-posts', 'carousel-query-pages'),
+            )
+        ),
 			),
 			'blocks_orderby_meta_key' => array(
 				'type'        => 'text',
 				'label'       => esc_attr__( 'Meta Key to Order By', 'fundament_wp' ),
 				'description' => esc_attr__( 'If you choose to order by meta value, then enter the meta key defined in post custom fields.', 'fundament_wp' ),
-				'default'     => ''
-			)
+				'default'     => '',
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('cards-query-posts', 'cards-query-pages', 'carousel-query-posts', 'carousel-query-pages'),
+            )
+        ),
+			),
+			'carousel_layout_type' => array(
+				'type'        => 'select',
+				'label'       => esc_attr__( 'Carousel Layout Type', 'fundament_wp' ),
+				'description' => esc_attr__( 'Select type of layout for your carousel.', 'fundament_wp' ),
+				'default'     => 'card-vertical',
+				'choices'     => array(
+					'left-aligned'  => esc_attr__( 'Left Aligned Slides', 'fundament_wp' ),
+					'center-aligned'   => esc_attr__( 'Center Aligned Slides', 'fundament_wp' ),
+					'right-aligned'   => esc_attr__( 'Right Aligned Slides', 'fundament_wp' ),
+					'image-on-left'   => esc_attr__( 'Slides with Image on Left', 'fundament_wp' ),
+					'image-on-right'   => esc_attr__( 'Slides with Image on Right', 'fundament_wp' )
+				),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('carousel-query-posts', 'carousel-query-pages'),
+            )
+        ),
+			),
+			'carousel_stretch_layout' => array(
+				'type'        => 'checkbox',
+				'label'       => esc_attr__( 'Full Width Carousel (Use without sidebar)', 'fundament_wp' ),
+				'default'     => false,
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => 'contains', 
+        			'value' => array('carousel-query-posts', 'carousel-query-pages'),
+            )
+        ),
+			),
+			'blocks_shortcode' => array(
+				'type'        => 'textarea',
+				'label'       => esc_attr__( 'Custom Shortcode', 'fundament_wp' ),
+				'description' => esc_attr__( 'Enter a custom shortcode you have created to output.', 'fundament_wp' ),
+				'default'     => '',
+        'required' => array(
+            array(
+        			'setting' => 'blocks_type', 
+        			'operator' => '==', 
+        			'value' => 'shortcode-block',
+            )
+        ),
+			),
 		)
 	)
 );
@@ -1528,6 +1647,7 @@ my_config_kirki_add_field(
 			'flat-style'      => esc_attr__( 'Flat Style', 'fundament_wp' ),
 			'light-shadow'    => esc_attr__( 'Light Shadow', 'fundament_wp' ),
 			'material-style'  => esc_attr__( 'Material Style', 'fundament_wp' ),
+			'without-frame'  => esc_attr__( 'Without Frame', 'fundament_wp' ),
 		),
 	)
 );

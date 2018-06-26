@@ -41,11 +41,13 @@ $navbar_placement = get_theme_mod( 'navbar_placement' );
 		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-					<?php } else {
+					<?php $site_title_with_logo = get_theme_mod( 'site_title_with_logo', false ); ?>
+					<?php if ( has_custom_logo() ) {
 						the_custom_logo();
 					} ?><!-- end custom logo -->
+					<?php if ( ! has_custom_logo() || $site_title_with_logo ) { ?>
+						<a class="navbar-brand<?php if ( has_custom_logo() ) { ?> site-title-with-logo<?php } ?>" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a><?php } ?>
+
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
