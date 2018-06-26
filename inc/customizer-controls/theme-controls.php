@@ -604,7 +604,7 @@ my_config_kirki_add_field(
 		'label'       => __( 'Body Document Background Color', 'fundament_wp' ),
 		'description' => esc_attr__( 'Define the background color of your website body.', 'fundament_wp' ),
 		'section'     => 'theme_layout_section',
-		'default'     => '#fff',
+		'default'     => '#F1F1F1',
 		'choices'     => array(
 			'alpha' => true,
 		),
@@ -1642,7 +1642,7 @@ my_config_kirki_add_field(
 		'description' => esc_attr__( 'Select one of the predefined card styles. You may overwrite these with settings below.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
 		'transport'   => 'refresh',
-		'default'     => 'flat-style',
+		'default'     => 'light-shadow',
 		'choices'     => array(
 			'flat-style'      => esc_attr__( 'Flat Style', 'fundament_wp' ),
 			'light-shadow'    => esc_attr__( 'Light Shadow', 'fundament_wp' ),
@@ -1762,7 +1762,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Card Top Border', 'fundament_wp' ),
 		'description' => esc_attr__( 'Set the size of the top border on cards.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
-		'default'     => '0',
+		'default'     => '5',
 		'choices'     => array(
 			'min'  => 0,
 			'max'  => 16.0,
@@ -1799,6 +1799,7 @@ my_config_kirki_add_field(
 		'label'       => __( 'Card Top Border Color', 'fundament_wp' ),
 		'description' => esc_attr__( 'Define the color of the top border on cards.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
+		'default'     => '#88dbdf',
 		'choices'     => array(
 			'alpha' => true,
 		),
