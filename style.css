@@ -606,4 +606,23 @@ svg.feather {
 .footer-widget {
   margin-top: 1rem; }
 
+.docs-side-nav-title {
+  padding-top: 1rem; }
+
+.seperation::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  border-top: 2px solid #88dbdf;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+a.anchorjs-link {
+  border-bottom: 0 !important;
+  padding-left: 0.5rem !important; }
+  a.anchorjs-link::after {
+    color: #88dbdf; }
+  a.anchorjs-link:hover {
+    filter: brightness(90%) !important; }
+
 /*# sourceMappingURL=style.css.map */
