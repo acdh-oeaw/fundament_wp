@@ -5,7 +5,7 @@
  * @package fundament_wp
  */
 
-$container   = get_theme_mod( 'theme_layout_container', 'container' );
+$container = get_theme_mod( 'theme_layout_container', 'container' );
 
 ?>
 

@@ -27,15 +27,18 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
     if ($footer_default_fundament) {
       $container = fundament_wp_get_theme_mod( 'theme_layout_container', 'container' );
       $content = '
-      <div class="wrapper" id="wrapper-footer-fundament">
-        <div class="'. esc_attr( $container ) .'" id="footer-fundament-content" tabindex="-1">
+      <div class="wrapper fundament-default-footer" id="wrapper-footer-full">
+        <div class="'. esc_attr( $container ) .'" id="footer-full-content" tabindex="-1">
+          <div class="footer-separator">
+            <i data-feather="message-circle"></i> CONTACT
+          </div>
           <div class="row">
-            <div id="custom_html-4" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-2">
+            <div class="footer-widget col-lg-1 col-md-2 col-sm-2 col-xs-6 col-3">
               <div class="textwidget custom-html-widget">
-                <a href="/"><img src="http://localhost/dev/acdh/fundament_wp/wp-content/uploads/2018/06/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; min-width: 8rem; height: auto;" title="ACDH Logo"></a>
+                <a href="/"><img src="http://localhost/dev/acdh/fundament_wp/wp-content/uploads/2018/06/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo"></a>
               </div>
             </div><!-- .footer-widget -->
-            <div id="custom_html-3" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-4">
+            <div class="footer-widget col-lg-4 col-md-4 col-sm-6 col-9">
               <div class="textwidget custom-html-widget">
                 <p>
                   ACDH-ÖAW
@@ -52,23 +55,23 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
                 <p>
                   T: +43 1 51581-2200
                   <br>
-                  E: <a href="javascript:linkTo_UnCryptMailto("nbjmup;bdeiApfbx/bd/bu");">acdh(at)oeaw.ac.at</a>
+                  E: <a href="mailto:acdh@oeaw.ac.at">acdh@oeaw.ac.at</a>
                 </p>
               </div>
             </div><!-- .footer-widget -->
-            <div id="custom_html-5" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-4 ml-auto">
+            <div class="footer-widget col-lg-3 col-md-4 col-sm-4 ml-auto">
               <div class="textwidget custom-html-widget">
-                <h3>HELPDESK</h3>
+                <h6>HELPDESK</h6>
                 <p>ACDH runs a helpdesk offering advice for questions related to various digital humanities topics.</p>
                 <p>
-                  <a class="helpdesk-button" href="javascript:linkTo_UnCryptMailto("nbjmup;bdeiApfbx/bd/bu");">ASK US!</a>
+                  <a class="helpdesk-button" href="mailto:acdh-tech@oeaw.ac.at">ASK US!</a>
                 </p>
               </div>
             </div><!-- .footer-widget -->
           </div>
         </div>
-      </div><!-- #wrapper-footer-fundament -->
-      <div class="footer-imprint-bar">
+      </div><!-- #wrapper-footer-full -->
+      <div class="footer-imprint-bar" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;">
         © Copyright OEAW | <a href="https://arche.acdh.oeaw.ac.at/browser/imprint">Impressum/Imprint</a>
       </div>
       ';

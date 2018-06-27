@@ -8,7 +8,7 @@
 ?>
 
 <?php
-$sidebar_pos = get_theme_mod( 'theme_layout_sidebar', 'right' );
+$sidebar_pos = fundament_wp_get_theme_mod( 'theme_layout_sidebar' );
 ?>
 
 <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>

@@ -8,7 +8,7 @@
 get_header();
 
 $container   = get_theme_mod( 'theme_layout_container', 'container' );
-$sidebar_pos = get_theme_mod( 'theme_layout_sidebar', 'right' );
+$sidebar_pos = fundament_wp_get_theme_mod( 'theme_layout_sidebar' );
 
 ?>
 

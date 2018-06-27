@@ -10,7 +10,7 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 }
 
 // when both sidebars turned on reduce col size to 3 from 4.
-$sidebar_pos = get_theme_mod( 'theme_layout_sidebar', 'right' );
+$sidebar_pos = fundament_wp_get_theme_mod( 'theme_layout_sidebar' );
 ?>
 
 <?php if ( 'both' === $sidebar_pos ) : ?>

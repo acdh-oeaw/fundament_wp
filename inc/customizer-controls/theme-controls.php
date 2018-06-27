@@ -529,7 +529,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Sidebar Positioning', 'fundament_wp' ),
 		'description' => esc_attr__( 'Set the position of your sidebar. Can either be: right, left, both or none. After defining this setting, please go to Widgets section to add widgets to different sidebars. Note: this can be overridden on individual pages.', 'fundament_wp' ),
 		'section'     => 'theme_layout_section',
-		'default'     => 'right',
+		'default'     => 'none',
 		'choices'     => array(
 			'right' => esc_attr__( 'Right sidebar', 'fundament_wp' ),
 			'left' => esc_attr__( 'Left sidebar', 'fundament_wp' ),
@@ -2205,7 +2205,7 @@ my_config_kirki_add_field(
 		'label'       => __( 'Primary Footer Background Color', 'fundament_wp' ),
 		'description' => esc_attr__( 'Define the background color of your primary footer. This footer block will be visible if you add some widgets to this area.', 'fundament_wp' ),
 		'section'     => 'footer_section',
-		'default'     => '#e9ecef',
+		'default'     => '#ffffff',
 		'choices'     => array(
 			'alpha' => true,
 		),
@@ -2271,14 +2271,14 @@ my_config_kirki_add_field(
 		),
     'output'    => array(
     	array(
-    		'element'         => '#wrapper-footer-full .widget-title',
+    		'element'         => array('#wrapper-footer-full .widget-title', '.footer-separator'),
     		'property'        => 'border-bottom-color',
       ),
     ),
 		'transport'   => 'postMessage',
     'js_vars'     => array(
     	array(
-    		'element'         => '#wrapper-footer-full .widget-title',
+    		'element'         => array('#wrapper-footer-full .widget-title', '.footer-separator'),
     		'property'        => 'border-bottom-color',
       ),
     ),
@@ -2295,7 +2295,7 @@ my_config_kirki_add_field(
 		'label'       => __( 'Secondary Footer Background Color', 'fundament_wp' ),
 		'description' => esc_attr__( 'Define the background color of your secondary footer. This footer block will be visible if you add some widgets to this area.', 'fundament_wp' ),
 		'section'     => 'footer_section',
-		'default'     => '#212529',
+		'default'     => '#f1f1f1',
 		'choices'     => array(
 			'alpha' => true,
 		),
@@ -2355,7 +2355,7 @@ my_config_kirki_add_field(
 		'label'       => __( 'Secondary Footer Text Color', 'fundament_wp' ),
 		'description' => esc_attr__( 'Define the text color of your secondary footer.', 'fundament_wp' ),
 		'section'     => 'footer_section',
-		'default'     => '#fff',
+		'default'     => '#222222',
 		'choices'     => array(
 			'alpha' => true,
 		),
