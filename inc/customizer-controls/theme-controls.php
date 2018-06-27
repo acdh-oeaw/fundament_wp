@@ -1846,7 +1846,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Display Author Avatar on Cards', 'fundament_wp' ),
 		'description' => esc_attr__( 'Select if you want to display the author avatar on card items.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
-		'default'     => true,
+		'default'     => false,
 		'transport'   => 'refresh',
 	)
 );
@@ -1861,7 +1861,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Display Author Name on Cards', 'fundament_wp' ),
 		'description' => esc_attr__( 'Select if you want to display the author name on card items.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
-		'default'     => true,
+		'default'     => false,
 		'transport'   => 'refresh',
 	)
 );
@@ -1876,7 +1876,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Display Post Date on Cards', 'fundament_wp' ),
 		'description' => esc_attr__( 'Select if you want to display the post date on card items.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
-		'default'     => true,
+		'default'     => false,
 		'transport'   => 'refresh',
 	)
 );
@@ -1906,7 +1906,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Display Meta Icons on Cards', 'fundament_wp' ),
 		'description' => esc_attr__( 'Select if you want to display the meta icons on card items.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
-		'default'     => true,
+		'default'     => false,
 		'transport'   => 'refresh',
 	)
 );
@@ -1936,7 +1936,7 @@ my_config_kirki_add_field(
 		'label'       => esc_attr__( 'Display Read More Button on Cards', 'fundament_wp' ),
 		'description' => esc_attr__( 'Select if you want to display the read more button on card items.', 'fundament_wp' ),
 		'section'     => 'home_blocks_section',
-		'default'     => false,
+		'default'     => true,
 		'transport'   => 'refresh',
 	)
 );
@@ -2179,6 +2179,21 @@ my_config_kirki_add_field(
 	)
 );
 
+
+/**
+ * Use Default Fundament Footer
+ */
+my_config_kirki_add_field(
+	array(
+		'type'        => 'toggle',
+		'settings'    => 'footer_default_fundament',
+		'label'       => esc_attr__( 'Use Fundament Footer', 'fundament_wp' ),
+		'description' => esc_attr__( 'Select if you want to display the default Fundament footer.', 'fundament_wp' ),
+		'section'     => 'footer_section',
+		'default'     => true,
+		'transport'   => 'refresh',
+	)
+);
 
 /**
  * Primary Footer Background Color

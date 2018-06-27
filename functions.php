@@ -6,6 +6,11 @@
  */
 
 /**
+ * Load Customizer controls.
+ */
+require get_template_directory() . '/inc/customizer-controls/customizer-controls.php';
+
+/**
  * Initialize theme default settings
  */
 require get_template_directory() . '/inc/theme-settings.php';
@@ -69,8 +74,3 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
-
-/**
- * Load Editor functions.
- */
-require get_template_directory() . '/inc/customizer-controls/customizer-controls.php';

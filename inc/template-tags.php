@@ -11,7 +11,7 @@ if ( ! function_exists( 'fundament_wp_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function fundament_wp_entry_meta($avatar = true, $author = true, $postdate = true, $readingtime = false, $icons = true, $tags = false, $authorbio = false, $avatarsize = 40) {
+function fundament_wp_entry_meta($avatar = false, $author = false, $postdate = false, $readingtime = false, $icons = false, $tags = false, $authorbio = false, $avatarsize = 40) {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
