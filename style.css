@@ -625,4 +625,12 @@ a.anchorjs-link {
   a.anchorjs-link:hover {
     filter: brightness(90%) !important; }
 
+.wp-geshi-highlight {
+  padding: 10px 10px 10px 15px;
+  background-color: rgba(136, 220, 223, 0.14); }
+
+.wp-geshi-highlight pre, .wp-geshi-highlight span {
+  font-size: 14px !important;
+  line-height: 22px !important; }
+
 /*# sourceMappingURL=style.css.map */
