@@ -498,7 +498,7 @@ svg.feather {
 
 .single main > article, .page main > article {
   margin-bottom: 2rem;
-  padding: 15px;
+  padding: 30px;
   border-top: 5px solid #88dbdf;
   border-radius: 2px;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.03);
@@ -624,6 +624,12 @@ a.anchorjs-link {
     color: #88dbdf; }
   a.anchorjs-link:hover {
     filter: brightness(90%) !important; }
+
+.docs-demo-wrapper {
+  padding: 1.5rem;
+  background: rgba(136, 220, 223, 0.14); }
+  .docs-demo-wrapper a {
+    border-bottom: 0 !important; }
 
 .wp-geshi-highlight {
   padding: 10px 10px 10px 15px !important;
