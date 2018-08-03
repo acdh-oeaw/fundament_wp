@@ -8,13 +8,13 @@
 //Extract variables from the query
 extract( $wp_query->query_vars );
 if (!$blocks_per_row) { 
-  $blocks_per_row = get_theme_mod( 'archive_columns_per_row', 'col-md-12' );
+  $blocks_per_row = fundament_wp_get_theme_mod( 'archive_columns_per_row', 'col-md-12' );
 }
 if (!$blocks_layout_type) {
-  $blocks_layout_type = get_theme_mod( 'archive_blocks_layout_type', 'card-vertical' );
+  $blocks_layout_type = fundament_wp_get_theme_mod( 'archive_blocks_layout_type', 'card-vertical' );
 }
 // Get the card style selection
-$card_predefined_style = get_theme_mod( 'card_predefined_style', 'flat-style' );
+$card_predefined_style = fundament_wp_get_theme_mod( 'card_predefined_style', 'flat-style' );
 
 $articleClasses = array(
   'card',
@@ -36,7 +36,7 @@ $articleClasses = array(
 
     	<header class="entry-header">
       	
-      	<?php $card_category_toggle = get_theme_mod( 'card_category_toggle', true ); if ($card_category_toggle) { fundament_wp_entry_list_categories(); } ?>
+      	<?php $card_category_toggle = fundament_wp_get_theme_mod( 'card_category_toggle', true ); if ($card_category_toggle) { fundament_wp_entry_list_categories(); } ?>
 
     		<?php 
       		if ( is_sticky() ) { $sticky = '<i data-feather="star" class="sticky-icon"></i>'; } else { $sticky = ''; } 
@@ -51,7 +51,7 @@ $articleClasses = array(
     		the_excerpt();
     		?>
 
-        <?php if (get_theme_mod( 'card_readmore_toggle', false )) { ?>
+        <?php if (fundament_wp_get_theme_mod( 'card_readmore_toggle' )) { ?>
           <a class="btn btn-round mb-1" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>"><?php echo __( 'Read More','fundament_wp' ); ?></a>
         <?php } ?>
 
@@ -65,15 +65,15 @@ $articleClasses = array(
     	</div><!-- .entry-content -->
     
     	<?php if ( 'post' == get_post_type() ) {
-  			$avatar = get_theme_mod( 'card_avatar_toggle', true );
-  			$author = get_theme_mod( 'card_author_toggle', true );
-  			$postdate = get_theme_mod( 'card_postdate_toggle', true );
-  			$readingtime = get_theme_mod( 'card_readingtime_toggle', false );
-  			$icons =  get_theme_mod( 'card_icons_toggle', true );
-  			$tags =  get_theme_mod( 'card_tags_toggle', false );
+  			$avatar = fundament_wp_get_theme_mod( 'card_avatar_toggle', true );
+  			$author = fundament_wp_get_theme_mod( 'card_author_toggle', true );
+  			$postdate = fundament_wp_get_theme_mod( 'card_postdate_toggle', true );
+  			$readingtime = fundament_wp_get_theme_mod( 'card_readingtime_toggle', false );
+  			$icons =  fundament_wp_get_theme_mod( 'card_icons_toggle', true );
+  			$tags =  fundament_wp_get_theme_mod( 'card_tags_toggle', false );
         if ($avatar OR $author OR $postdate OR $readingtime OR $icons OR $tags) {
       ?>
-          <div class="entry-meta <?php if (get_theme_mod( 'card_readmore_toggle', false )) { echo 'mt-3'; } ?>">
+          <div class="entry-meta <?php if (fundament_wp_get_theme_mod( 'card_readmore_toggle', false )) { echo 'mt-3'; } ?>">
           <?php fundament_wp_entry_meta($avatar, $author, $postdate, $readingtime, $icons, $tags); ?>
     		  </div><!-- .entry-meta -->
     	<?php } } ?>

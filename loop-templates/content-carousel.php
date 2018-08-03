@@ -20,7 +20,7 @@ if ($home_content_block["carousel_stretch_layout"] == true) { $captionClass = 'c
   ?>
   <div class="carousel-caption <?php echo $columnClass . ' ' . $captionClass; ?>">
     <?php
-      $card_category_toggle = get_theme_mod( 'card_category_toggle', true ); if ($card_category_toggle) { fundament_wp_entry_list_categories(); } 
+      $card_category_toggle = fundament_wp_get_theme_mod( 'card_category_toggle', true ); if ($card_category_toggle) { fundament_wp_entry_list_categories(); } 
       the_title( sprintf( '<h4 class="entry-title">'.$sticky.'<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a></h4>' );
       the_excerpt();
     ?>

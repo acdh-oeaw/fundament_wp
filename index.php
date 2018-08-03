@@ -13,8 +13,8 @@
 
 get_header();
 
-$container = get_theme_mod( 'theme_layout_container', 'container' );
-$home_content_blocks = get_theme_mod( 'home_content_blocks' );
+$container = fundament_wp_get_theme_mod( 'theme_layout_container', 'container' );
+$home_content_blocks = fundament_wp_get_theme_mod( 'home_content_blocks' );
 if (!$home_content_blocks) { 
   //$home_content_blocks[0]["blocks_per_row"] = 'col-md-12'; 
 }
