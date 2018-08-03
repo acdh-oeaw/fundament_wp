@@ -102,7 +102,9 @@ if ($home_content_block["blocks_type"] == "cards-query-posts" || $home_content_b
     $blocks_layout_type = $home_content_block["blocks_layout_type"]; 
   }
 
-  $query = new WP_Query( $args );
+  if (isset($args)) {
+    $query = new WP_Query( $args );
+  }
 
 // Output custom shortcode block
 } else if ($home_content_block["blocks_type"] == "shortcode-block") {
@@ -132,7 +134,7 @@ if ( isset($query) ) {
     <?php if ($blocks_type == 'cards') { ?>
       <div class="card-wrapper">
     <?php } else if ($blocks_type == 'carousel') { $slide_number = 0; $carousel_id = 'carousel-'.uniqid(); ?>
-      <div id="<?php echo $carousel_id; ?>" class="carousel col-md-12 slide <?php echo $home_content_block["carousel_layout_type"]; if ($home_content_block["carousel_stretch_layout"] == true) { echo ' stretched'; } ?> " data-ride="carousel">
+      <div id="<?php echo $carousel_id; ?>" class="carousel slide <?php echo $home_content_block["carousel_layout_type"]; if ($home_content_block["carousel_stretch_layout"] == true) { echo ' stretched'; } ?> " data-ride="carousel">
           <div class="carousel-inner">
     <?php } ?>
   

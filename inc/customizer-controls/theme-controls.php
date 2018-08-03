@@ -1586,11 +1586,11 @@ my_config_kirki_add_field(
 				'type'        => 'select',
 				'label'       => esc_attr__( 'Carousel Layout Type', 'fundament_wp' ),
 				'description' => esc_attr__( 'Select type of layout for your carousel.', 'fundament_wp' ),
-				'default'     => 'card-vertical',
+				'default'     => 'text-overlay left-aligned',
 				'choices'     => array(
-					'left-aligned'  => esc_attr__( 'Left Aligned Slides', 'fundament_wp' ),
+					'text-overlay left-aligned'  => esc_attr__( 'Text Overlay - Left Aligned', 'fundament_wp' ),
+					'text-overlay right-aligned'   => esc_attr__( 'Text Overlay - Right Aligned', 'fundament_wp' ),
 					'center-aligned'   => esc_attr__( 'Center Aligned Slides', 'fundament_wp' ),
-					'right-aligned'   => esc_attr__( 'Right Aligned Slides', 'fundament_wp' ),
 					'image-on-left'   => esc_attr__( 'Slides with Image on Left', 'fundament_wp' ),
 					'image-on-right'   => esc_attr__( 'Slides with Image on Right', 'fundament_wp' )
 				),
