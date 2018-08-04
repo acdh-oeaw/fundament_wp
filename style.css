@@ -238,17 +238,17 @@ svg.feather {
       #wrapper-hero-content #wrapper-hero-inner p {
         width: 100%; } }
     #wrapper-hero-content #wrapper-hero-inner button:hover {
-      color: initial; }
-  #wrapper-hero-content .hero-dark {
-    color: #fff; }
-    #wrapper-hero-content .hero-dark h1 {
       color: #fff; }
-    #wrapper-hero-content .hero-dark .btn-round {
-      color: #fff;
-      border-color: #fff; }
-      #wrapper-hero-content .hero-dark .btn-round:hover {
-        background-color: #fff;
-        color: #212529; }
+    #wrapper-hero-content #wrapper-hero-inner.hero-dark {
+      color: #fff; }
+      #wrapper-hero-content #wrapper-hero-inner.hero-dark h1 {
+        color: #fff; }
+      #wrapper-hero-content #wrapper-hero-inner.hero-dark .btn-round {
+        color: #fff;
+        border-color: #fff; }
+        #wrapper-hero-content #wrapper-hero-inner.hero-dark .btn-round:hover {
+          background-color: #fff;
+          color: #212529; }
 
 .content-block-title {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
