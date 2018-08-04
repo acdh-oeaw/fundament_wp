@@ -432,13 +432,13 @@ svg.feather {
       max-height: 400px;
       margin: 0; }
   .carousel.text-overlay .carousel-inner .carousel-item .carousel-caption {
-    text-align: right;
-    right: 0;
+    text-align: left;
+    left: 0;
     bottom: 0;
-    left: auto;
+    right: auto;
     width: 50%;
-    padding: 30px;
-    background-color: #00b0bd; }
+    padding: 15px;
+    background-color: #3B89AD; }
     .carousel.text-overlay .carousel-inner .carousel-item .carousel-caption .entry-title a {
       color: #fff; }
     .carousel.text-overlay .carousel-inner .carousel-item .carousel-caption .entry-cat-links {
@@ -447,27 +447,33 @@ svg.feather {
         color: #fff; }
     .carousel.text-overlay .carousel-inner .carousel-item .carousel-caption .btn {
       border-color: #fff;
-      color: #fff; }
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      margin: 0; }
   .carousel.text-overlay .carousel-inner ol.carousel-indicators {
     right: 50%;
     justify-content: flex-end;
     margin: 0 1rem 1rem 0; }
   .carousel.text-overlay .carousel-control-prev {
     top: auto;
-    left: 30px;
+    right: 65px;
+    left: auto;
     bottom: 20px;
     height: 30px;
     width: 30px;
     border: 1px solid #fff;
-    border-radius: 50%; }
+    border-radius: 50%;
+    opacity: 1; }
   .carousel.text-overlay .carousel-control-next {
     top: auto;
-    left: 70px;
+    right: 30px;
     bottom: 20px;
     height: 30px;
     width: 30px;
     border: 1px solid #fff;
-    border-radius: 50%; }
+    border-radius: 50%;
+    opacity: 1; }
   .carousel.right-aligned .carousel-inner .carousel-item .carousel-caption {
     text-align: right;
     right: 0;

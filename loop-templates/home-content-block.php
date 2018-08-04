@@ -152,13 +152,6 @@ if ( isset($query) ) {
     <?php if ($blocks_type == 'cards') { ?>
       </div><!-- .card-wrapper -->
     <?php } else if ($blocks_type == 'carousel') { ?>
-        <?php if ($slide_number > 1) { ?>
-        <ol class="carousel-indicators">
-          <?php for ($i = 1; $i <= $slide_number; $i++) { ?>
-            <li data-target="#<?php echo $carousel_id; ?>" data-slide-to="<?php echo $i; ?>" class="<?php if ($slide_number == 1) { ?> active<?php } ?>"></li>
-          <?php } ?>
-        </ol>
-        <?php } ?>
       </div><!-- .carousel-inner -->
       <?php if ($slide_number > 1) { ?>
       <a class="carousel-control-prev" href="#<?php echo $carousel_id; ?>" role="button" data-slide="prev">
