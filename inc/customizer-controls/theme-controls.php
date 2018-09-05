@@ -358,8 +358,8 @@ my_config_kirki_add_field(
 		'section'     => 'navbar_section',
 		'transport'   => 'postMessage',
 		'default'     => array(
-			'padding-right'    => '0.5rem',
-			'padding-left' => '0.5rem',
+			'padding-right'    => '0.75rem',
+			'padding-left' => '0.75rem',
 		),
     'output'    => array(
     	array(

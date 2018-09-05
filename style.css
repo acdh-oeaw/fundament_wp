@@ -79,6 +79,10 @@ svg.feather {
   .navbar-toggler:focus {
     outline: 0; }
 
+.dropdown-toggle:after {
+  margin-left: .15em;
+  vertical-align: .2em; }
+
 .navbar {
   border-bottom: 5px solid #88dbdf;
   background-color: #fff;
@@ -102,8 +106,8 @@ svg.feather {
     position: relative; }
     @media (max-width: 991px) {
       .navbar .nav-item .nav-link {
-        padding-left: 0;
-        padding-right: 0; } }
+        padding-left: 0 !important;
+        padding-right: 0 !important; } }
   .navbar .nav-item.active .nav-link::after {
     content: "";
     height: 0px;
