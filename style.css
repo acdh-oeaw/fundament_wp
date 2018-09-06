@@ -313,7 +313,10 @@ svg.feather {
           .card-wrapper .card .card-inner.card-horizontal .entry-top-thumbnail > img {
             height: 100%;
             width: auto;
-            max-width: none; }
+            max-width: none;
+            object-fit: cover;
+            width: 100%;
+            height: 100%; }
         .card-wrapper .card .card-inner.card-horizontal .entry-text-content {
           flex-basis: 60%;
           flex-grow: 1; }
@@ -330,13 +333,15 @@ svg.feather {
 
 .entry-top-thumbnail {
   margin: -15px -15px 15px -15px;
-  max-height: 250px;
+  height: 15rem;
   overflow: hidden;
   justify-content: center;
   display: flex;
   align-items: center; }
   .entry-top-thumbnail img {
-    width: 100%; }
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
 
 .entry-meta {
   font-size: 0.85rem;
