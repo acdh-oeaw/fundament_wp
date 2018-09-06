@@ -1428,7 +1428,7 @@ my_config_kirki_add_field(
             array(
         			'setting' => 'blocks_type', 
         			'operator' => 'contains', 
-        			'value' => array('cards-query-posts', 'cards-query-pages'),
+        			'value' => array('cards-query-posts', 'cards-query-pages', 'carousel-query-posts', 'carousel-query-pages'),
             )
         ),
 			),
@@ -1484,6 +1484,25 @@ my_config_kirki_add_field(
         			'value' => array('cards-query-posts', 'cards-query-pages'),
             )
         ),
+			),
+			'blocks_image_height' => array(
+				'type'        => 'number',
+				'label'       => esc_attr__( 'Blocks Thumbnails Height', 'fundament_wp' ),
+				'description' => esc_attr__( 'Define a fixed height for the blocks thumbnails in px.', 'fundament_wp' ),
+      	'default'     => 240,
+        'required' => array(
+            array(
+        			'setting' => 'blocks_layout_type', 
+        			'operator' => '==', 
+        			'value' => 'card-vertical',
+            )
+        ),
+			),
+			'blocks_min_height' => array(
+				'type'        => 'number',
+				'label'       => esc_attr__( 'Blocks Minimum Height', 'fundament_wp' ),
+				'description' => esc_attr__( 'Define a minimum height for the individual blocks in px.', 'fundament_wp' ),
+      	'default'     => 450,
 			),
 			'blocks_post_category_query' => array(
 				'type'        => 'select',

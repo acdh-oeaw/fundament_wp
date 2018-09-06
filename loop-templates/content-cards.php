@@ -25,11 +25,11 @@ $articleClasses = array(
 
 <article <?php post_class($articleClasses); ?> id="post-<?php the_ID(); ?>">
 
-  <div class="card-inner <?php echo esc_attr( $blocks_layout_type ); ?>">
+  <div class="card-inner <?php echo esc_attr( $blocks_layout_type ); ?>" style="min-height:<?php echo $blocks_min_height; ?>;">
 
   <?php 
     $postThumbnail = get_the_post_thumbnail( $post->ID, 'large' ); 
-    if ($postThumbnail && $blocks_layout_type != 'card-no-image' ) { echo '<a class="entry-top-thumbnail" href="'.esc_url( get_permalink() ).'" rel="bookmark">'.$postThumbnail.'</a>'; }
+    if ($postThumbnail && $blocks_layout_type != 'card-no-image' ) { echo '<a class="entry-top-thumbnail" style="height:'.$blocks_image_height.';" href="'.esc_url( get_permalink() ).'" rel="bookmark">'.$postThumbnail.'</a>'; }
   ?>
 
     <div class="entry-text-content">

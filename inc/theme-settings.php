@@ -143,3 +143,15 @@ function fundament_wp_extra_customizer_options( $wp_customize ) {
 
 }
 add_action('customize_register','fundament_wp_extra_customizer_options');
+
+// Decrease the default excerpt length
+add_filter( 'excerpt_length', function($length) {
+    return 25;
+} );
+
+
+
+
+
+
+

@@ -14,6 +14,8 @@ if (isset($home_content_block["number_of_blocks"])) { $number_of_blocks = $home_
 if (isset($home_content_block["blocks_orderby"])) { $blocks_orderby = $home_content_block["blocks_orderby"]; }
 if (isset($home_content_block["blocks_order"])) { $blocks_order = $home_content_block["blocks_order"]; }
 if (isset($home_content_block["blocks_orderby_meta_key"])) { $blocks_orderby_meta_key = $home_content_block["blocks_orderby_meta_key"]; }
+if (isset($home_content_block["blocks_image_height"])) { $blocks_image_height = $home_content_block["blocks_image_height"] . "px"; }
+if (isset($home_content_block["blocks_min_height"])) { $blocks_min_height = $home_content_block["blocks_min_height"] . "px"; }
 
 // Querying posts
 if ($home_content_block["blocks_type"] == "cards-query-posts" || $home_content_block["blocks_type"] == "carousel-query-posts") {
@@ -129,6 +131,8 @@ if ( isset($query) ) {
       <h5 class="content-block-title"><span class="separator-title"><?php echo esc_attr( $block_title ); ?></span></h5>
     <?php }
     if (isset($blocks_per_row) && $blocks_per_row) { set_query_var( 'blocks_per_row', $blocks_per_row ); } else { set_query_var( 'blocks_per_row', 'col-md-12' ); }
+    if (isset($blocks_image_height) && $blocks_image_height) { set_query_var( 'blocks_image_height', $blocks_image_height ); } else { set_query_var( 'blocks_image_height', 'auto' ); }
+    if (isset($blocks_min_height) && $blocks_min_height) { set_query_var( 'blocks_min_height', $blocks_min_height ); } else { set_query_var( 'blocks_min_height', 'auto' ); }
     if (isset($blocks_layout_type) && $blocks_layout_type) { set_query_var( 'blocks_layout_type', $blocks_layout_type ); } else { set_query_var( 'blocks_layout_type', 'card-vertical' ); }  ?>
   
     <?php if ($blocks_type == 'cards') { ?>
