@@ -50,6 +50,9 @@ body {
 .site > * {
   width: 100%; }
 
+iframe {
+  max-width: 100%; }
+
 svg.feather {
   width: 1.1rem;
   max-width: 100%;
@@ -616,6 +619,9 @@ svg.feather {
 .separator-title {
   border-bottom: 1px solid #444444;
   padding-bottom: calc(1rem + 1px); }
+
+.wp-block-button__link:not(.has-text-color), .wp-block-button__link:not(.has-text-color):active, .wp-block-button__link:not(.has-text-color):focus, .wp-block-button__link:not(.has-text-color):hover {
+  color: #fff !important; }
 
 /*
  ** 07. Footer
