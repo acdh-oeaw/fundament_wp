@@ -25,7 +25,7 @@ $articleClasses = array(
 
 <article <?php post_class($articleClasses); ?> id="post-<?php the_ID(); ?>">
 
-  <div class="card-inner <?php echo esc_attr( $blocks_layout_type ); ?>" style="min-height:<?php echo $blocks_min_height; ?>;">
+  <div class="card-inner <?php echo esc_attr( $blocks_layout_type ); ?>" <?php if ( $blocks_layout_type != 'card-image-overlay' ) { ?> style="min-height:<?php echo $blocks_min_height; ?>;" <?php } ?>>
 
   <?php 
     $postThumbnail = get_the_post_thumbnail( $post->ID, 'large' ); 

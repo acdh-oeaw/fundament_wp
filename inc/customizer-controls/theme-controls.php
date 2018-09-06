@@ -1493,8 +1493,8 @@ my_config_kirki_add_field(
         'required' => array(
             array(
         			'setting' => 'blocks_layout_type', 
-        			'operator' => '==', 
-        			'value' => 'card-vertical',
+        			'operator' => 'contains', 
+        			'value' => array('card-vertical', 'card-image-overlay'),
             )
         ),
 			),
@@ -1503,6 +1503,13 @@ my_config_kirki_add_field(
 				'label'       => esc_attr__( 'Blocks Minimum Height', 'fundament_wp' ),
 				'description' => esc_attr__( 'Define a minimum height for the individual blocks in px.', 'fundament_wp' ),
       	'default'     => 450,
+        'required' => array(
+            array(
+        			'setting' => 'blocks_layout_type', 
+        			'operator' => 'contains', 
+        			'value' => array('card-vertical', 'card-horizontal card-horizontal-left', 'card-horizontal card-horizontal-right', 'card-no-image'),
+            )
+        ),
 			),
 			'blocks_post_category_query' => array(
 				'type'        => 'select',
