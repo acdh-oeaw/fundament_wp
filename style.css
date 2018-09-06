@@ -571,7 +571,7 @@ svg.feather {
     .single main > article .entry-meta .entry-meta-icons, .page main > article .entry-meta .entry-meta-icons {
       min-width: 15rem; }
   .single main > article .entry-top-thumbnail, .page main > article .entry-top-thumbnail {
-    margin: 0 0 2rem 0;
+    margin: -30px -30px 15px -30px;
     max-height: 25rem; }
   .single main > article .entry-top-thumbnail-caption, .page main > article .entry-top-thumbnail-caption {
     margin: -1.5rem 0 0.5rem 0;

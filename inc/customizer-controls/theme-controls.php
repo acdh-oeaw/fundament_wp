@@ -1948,11 +1948,11 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'sortable',
 		'settings'    => 'single_posts_layout_order',
-		'label'       => esc_attr__( 'Single Posts Layout Order.', 'fundament_wp' ),
+		'label'       => esc_attr__( 'Single Posts Layout Order', 'fundament_wp' ),
 		'description' => esc_attr__( 'Set your order for the single posts layout. The order of featured image and post title applies to default page templates as well.', 'fundament_wp' ),
 		'section'     => 'single_posts_section',
 		'transport'   => 'refresh',
-		'default'     => array( 'entry_meta', 'featured_image', 'post_title' ),
+		'default'     => array( 'featured_image', 'post_title' ),
 		'choices'     => array(
   		'entry_meta' => esc_attr__( 'Post Meta Area', 'fundament_wp' ),
 			'featured_image' => esc_attr__( 'Featured Image', 'fundament_wp' ),

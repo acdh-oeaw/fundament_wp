@@ -11,17 +11,17 @@
 	<header class="entry-header">
 
   <?php 
-    $single_posts_layout_order = get_theme_mod( 'single_posts_layout_order', array( 'entry_meta', 'featured_image', 'post_title' ) );
+    $single_posts_layout_order = fundament_wp_get_theme_mod( 'single_posts_layout_order' );
 
     foreach ($single_posts_layout_order as $layout_area) {
       if ($layout_area == 'entry_meta') {
-        $avatar = get_theme_mod( 'post_avatar_toggle', true );
-  			$author = get_theme_mod( 'post_author_toggle', true );
-  			$postdate = get_theme_mod( 'post_postdate_toggle', true );
-  			$readingtime = get_theme_mod( 'post_readingtime_toggle', false );
-  			$icons =  get_theme_mod( 'post_icons_toggle', false );
-  			$tags =  get_theme_mod( 'post_tags_toggle', true );
-  			$authorbio =  get_theme_mod( 'post_authorbio_toggle', true );
+        $avatar = fundament_wp_get_theme_mod( 'post_avatar_toggle', true );
+  			$author = fundament_wp_get_theme_mod( 'post_author_toggle', true );
+  			$postdate = fundament_wp_get_theme_mod( 'post_postdate_toggle', true );
+  			$readingtime = fundament_wp_get_theme_mod( 'post_readingtime_toggle', false );
+  			$icons = fundament_wp_get_theme_mod( 'post_icons_toggle', false );
+  			$tags = fundament_wp_get_theme_mod( 'post_tags_toggle', true );
+  			$authorbio = fundament_wp_get_theme_mod( 'post_authorbio_toggle', true );
 
         if ($avatar OR $author OR $postdate OR $readingtime OR $icons OR $tags OR $authorbio) {
           echo '<div class="entry-meta">';
