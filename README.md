@@ -12,7 +12,7 @@
 ## Table of contents
 
 - [Status](#status)
-- [Development](#development)
+- [Installation](#installation)
 - [What's included](#whats-included)
 
 
