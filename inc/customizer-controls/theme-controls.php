@@ -1545,6 +1545,7 @@ my_config_kirki_add_field(
 				'type'        => 'number',
 				'label'       => esc_attr__( 'Blocks Minimum Height', 'fundament_wp' ),
 				'description' => esc_attr__( 'Define a minimum height for the individual blocks in px.', 'fundament_wp' ),
+				'default'    => 80,
         'required' => array(
             array(
         			'setting' => 'blocks_layout_type', 
