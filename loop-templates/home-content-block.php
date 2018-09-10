@@ -16,6 +16,8 @@ if (isset($home_content_block["blocks_order"])) { $blocks_order = $home_content_
 if (isset($home_content_block["blocks_orderby_meta_key"])) { $blocks_orderby_meta_key = $home_content_block["blocks_orderby_meta_key"]; }
 if (isset($home_content_block["blocks_image_height"])) { $blocks_image_height = $home_content_block["blocks_image_height"] . "px"; }
 if (isset($home_content_block["blocks_min_height"])) { $blocks_min_height = $home_content_block["blocks_min_height"] . "px"; }
+if (isset($home_content_block["blocks_overlay_color"])) { $blocks_overlay_color = $home_content_block["blocks_overlay_color"]; }
+if (isset($home_content_block["blocks_overlay_text_color"])) { $blocks_overlay_text_color = $home_content_block["blocks_overlay_text_color"]; }
 
 // Querying posts
 if ($home_content_block["blocks_type"] == "cards-query-posts" || $home_content_block["blocks_type"] == "carousel-query-posts") {
@@ -133,7 +135,10 @@ if ( isset($query) ) {
     if (isset($blocks_per_row) && $blocks_per_row) { set_query_var( 'blocks_per_row', $blocks_per_row ); } else { set_query_var( 'blocks_per_row', 'col-md-12' ); }
     if (isset($blocks_image_height) && $blocks_image_height) { set_query_var( 'blocks_image_height', $blocks_image_height ); } else { set_query_var( 'blocks_image_height', 'auto' ); }
     if (isset($blocks_min_height) && $blocks_min_height) { set_query_var( 'blocks_min_height', $blocks_min_height ); } else { set_query_var( 'blocks_min_height', 'auto' ); }
-    if (isset($blocks_layout_type) && $blocks_layout_type) { set_query_var( 'blocks_layout_type', $blocks_layout_type ); } else { set_query_var( 'blocks_layout_type', 'card-vertical' ); }  ?>
+    if (isset($blocks_layout_type) && $blocks_layout_type) { set_query_var( 'blocks_layout_type', $blocks_layout_type ); } else { set_query_var( 'blocks_layout_type', 'card-vertical' ); }
+    if (isset($blocks_overlay_color) && $blocks_overlay_color) { set_query_var( 'blocks_overlay_color', $blocks_overlay_color ); } else { set_query_var( 'blocks_overlay_color', '' ); }
+    if (isset($blocks_overlay_text_color) && $blocks_overlay_text_color) { set_query_var( 'blocks_overlay_text_color', $blocks_overlay_text_color ); } else { set_query_var( 'blocks_overlay_text_color', 'light' ); }
+    ?>
   
     <?php if ($blocks_type == 'cards') { ?>
       <div class="card-wrapper">

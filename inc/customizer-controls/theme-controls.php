@@ -1485,6 +1485,50 @@ my_config_kirki_add_field(
             )
         ),
 			),
+			'blocks_overlay_color' => array(
+				'type'        => 'color',
+				'label'       => esc_attr__( 'Blocks Overlay Color', 'fundament_wp' ),
+				'description' => esc_attr__( 'Define a color with transparency to use as an overlay over the images.', 'fundament_wp' ),
+    		'default'     => 'rgba(224, 224, 224, 0.75);',
+    		'choices'     => array(
+    			'alpha' => true,
+    		),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_layout_type', 
+        			'operator' => '==', 
+        			'value' => 'card-image-overlay',
+            )
+        ),
+			),
+			'blocks_overlay_text_color' => array(
+				'type'        => 'checkbox',
+				'label'       => esc_attr__( 'Light Color Post Title', 'fundament_wp' ),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_layout_type', 
+        			'operator' => '==', 
+        			'value' => 'card-image-overlay',
+            )
+        ),
+			),
+			'blocks_overlay_text_color' => array(
+				'type'        => 'select',
+				'label'       => esc_attr__( 'Blocks Overlay Type', 'fundament_wp' ),
+				'description' => esc_attr__( 'Switch between dark or light type to change post title text color.', 'fundament_wp' ),
+				'default'     => 'light',
+				'choices'     => array(
+  				'light'   => esc_attr__( 'Light Overlay', 'fundament_wp' ),
+					'dark'   => esc_attr__( 'Dark Overlay', 'fundament_wp' )
+				),
+        'required' => array(
+            array(
+        			'setting' => 'blocks_layout_type', 
+        			'operator' => '==', 
+        			'value' => 'card-image-overlay',
+            )
+        ),
+			),
 			'blocks_image_height' => array(
 				'type'        => 'number',
 				'label'       => esc_attr__( 'Blocks Thumbnails Height', 'fundament_wp' ),

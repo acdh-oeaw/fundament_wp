@@ -22,14 +22,15 @@ $articleClasses = array(
   $card_predefined_style
 );
 ?>
-
 <article <?php post_class($articleClasses); ?> id="post-<?php the_ID(); ?>">
 
   <div class="card-inner <?php echo esc_attr( $blocks_layout_type ); ?>" style="min-height:<?php echo $blocks_min_height; ?>;">
 
   <?php 
     $postThumbnail = get_the_post_thumbnail( $post->ID, 'large' ); 
-    if ($postThumbnail && $blocks_layout_type != 'card-no-image' ) { echo '<a class="entry-top-thumbnail" style="height:'.$blocks_image_height.';" href="'.esc_url( get_permalink() ).'" rel="bookmark">'.$postThumbnail.'</a>'; }
+    if ( $postThumbnail && $blocks_layout_type != 'card-no-image' ) { echo '<a class="entry-top-thumbnail" style="height:'.$blocks_image_height.';" href="'.esc_url( get_permalink() ).'" rel="bookmark">'.$postThumbnail; }
+    if ( $blocks_layout_type == 'card-image-overlay') { echo '<div class="card-overlay-background" style="background-color:'.$blocks_overlay_color.'"></div>'; }
+    if ( $postThumbnail && $blocks_layout_type != 'card-no-image' ) { echo '</a>'; }
   ?>
 
     <div class="entry-text-content">
@@ -39,8 +40,8 @@ $articleClasses = array(
       	<?php $card_category_toggle = fundament_wp_get_theme_mod( 'card_category_toggle', true ); if ($card_category_toggle) { fundament_wp_entry_list_categories(); } ?>
 
     		<?php 
-      		if ( is_sticky() ) { $sticky = '<i data-feather="star" class="sticky-icon"></i>'; } else { $sticky = ''; } 
-      		the_title( sprintf( '<h4 class="entry-title">'.$sticky.'<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),'</a></h4>' );
+      		if ( is_sticky() ) { $sticky = '<i data-feather="star" class="sticky-icon"></i>'; } else { $sticky = ''; }
+      		the_title( sprintf( '<h4 class="entry-title">'.$sticky.'<a href="%s" rel="bookmark" class="'.$blocks_overlay_text_color.'">', esc_url( get_permalink() ) ),'</a></h4>' );
         ?>
     
     	</header><!-- .entry-header -->
