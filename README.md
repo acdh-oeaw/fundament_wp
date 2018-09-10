@@ -17,9 +17,9 @@
 
 
 ## Status
-Current stable version is v1.0.0.
+The most recent stable version can be found under releases.
 
-Moreover the project is under constant development.
+Moreover the project is currently under constant development.
 
 ## Installation
 - Clone or copy into your WordPress directory wp-content/themes/
