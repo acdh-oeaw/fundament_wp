@@ -146,12 +146,7 @@ add_action('customize_register','fundament_wp_extra_customizer_options');
 
 // Decrease the default excerpt length
 add_filter( 'excerpt_length', function($length) {
-    return 25;
+  $cards_excerpt_length = fundament_wp_get_theme_mod( 'cards_excerpt_length' );
+  return $cards_excerpt_length;
 } );
-
-
-
-
-
-
 
