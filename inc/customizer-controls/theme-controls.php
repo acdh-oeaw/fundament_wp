@@ -2011,6 +2011,27 @@ my_config_kirki_add_field(
 );
 
 /**
+ * Excerpt Lenght for Blocks
+ */
+my_config_kirki_add_field(
+	array(
+		'type'        => 'number',
+		'settings'    => 'cards_excerpt_length',
+		'label'       => esc_attr__( 'Excerpt Length for Blocks', 'fundament_wp' ),
+		'description' => esc_attr__( 'Define the amount of words you want to display in each content card from a post or a page.', 'fundament_wp' ),
+		'section'     => 'home_blocks_section',
+		'transport'   => 'refresh',
+		'default'     => 25,
+		'choices'     => array(
+			'min'  => 0,
+			'max'  => 500,
+			'step' => 1,
+		),
+	)
+);
+
+
+/**
  * Single Posts Layout Order
  */
 my_config_kirki_add_field(
