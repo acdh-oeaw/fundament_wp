@@ -149,4 +149,3 @@ add_filter( 'excerpt_length', function($length) {
   $cards_excerpt_length = fundament_wp_get_theme_mod( 'cards_excerpt_length' );
   return $cards_excerpt_length;
 } );
-
