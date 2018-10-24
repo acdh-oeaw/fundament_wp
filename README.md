@@ -50,3 +50,10 @@ fundament_wp/
 - [ ] Create separate pages for your application's views and integrate your application into the HTML body of Fundament
 - [ ] Check out Fundament's example pages and Bootstrap-4 for which CSS classes to use and adapt your components
 - [ ] Create and enqueue additional .css and .js files to overwrite / extend existing styles or functionality
+
+
+## Recommended Plugins
+- SVG Support (https://wordpress.org/plugins/svg-support/)
+- Shortcoder (https://wordpress.org/plugins/shortcoder/)
+- Insert Headers and Footers (https://wordpress.org/plugins/insert-headers-and-footers/)
+- WP Mail SMTP (https://de.wordpress.org/plugins/wp-mail-smtp/)
