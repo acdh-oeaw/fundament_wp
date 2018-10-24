@@ -76,6 +76,13 @@ $navbar_placement = get_theme_mod( 'navbar_placement' );
             </form>
           <?php } ?>
 
+          <?php $navbar_social_github = get_theme_mod( 'navbar_social_github', '' );
+            if ($navbar_social_github) { ?>
+              <a href="<?php echo $navbar_social_github; ?>" class="navbar-social-icon" target="_blank" rel="noopener">
+                <i data-feather="github"></i>
+              </a>
+          <?php } ?>
+
           <?php $navbar_social_twitter = get_theme_mod( 'navbar_social_twitter', '' );
             if ($navbar_social_twitter) { ?>
               <a href="<?php echo $navbar_social_twitter; ?>" class="navbar-social-icon" target="_blank" rel="noopener">

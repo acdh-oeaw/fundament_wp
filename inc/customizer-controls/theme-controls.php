@@ -473,6 +473,20 @@ my_config_kirki_add_field(
 );
 
 /**
+ * Navbar Social Media: GitHub Icon
+ */
+my_config_kirki_add_field(
+	array(
+		'type'        => 'text',
+		'settings'    => 'navbar_social_github',
+		'label'       => esc_attr__( 'Navbar Social Media: GitHub Icon', 'fundament_wp' ),
+		'description' => esc_attr__( 'To display a GitHub icon please add your GitHub URL below.', 'fundament_wp' ),
+		'section'     => 'navbar_section',
+		'transport'   => 'refresh',
+	)
+);
+
+/**
  * Navbar Social Media: Twitter Icon
  */
 my_config_kirki_add_field(
