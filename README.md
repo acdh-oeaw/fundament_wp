@@ -15,6 +15,7 @@
 - [Installation](#installation)
 - [What's included](#whats-included)
 - [Tips for creating your project website](#tips-for-creating-your-project-website)
+- [Recommended Plugins](#recommended-plugins)
 
 
 ## Status
