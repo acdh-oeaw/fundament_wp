@@ -64,7 +64,7 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
                 <h6>HELPDESK</h6>
                 <p>ACDH runs a helpdesk offering advice for questions related to various digital humanities topics.</p>
                 <p>
-                  <a class="helpdesk-button" href="mailto:acdh-tech@oeaw.ac.at">ASK US!</a>
+                  <a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">ASK US!</a>
                 </p>
               </div>
             </div><!-- .footer-widget -->
