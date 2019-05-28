@@ -72,7 +72,7 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
         </div>
       </div><!-- #wrapper-footer-full -->
       <div class="footer-imprint-bar" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;">
-        © Copyright OEAW | <a href="/imprint">Impressum/Imprint</a>
+        © Copyright OEAW | <a href="/imprint/">Impressum/Imprint</a>
       </div>
       ';
       echo $content;

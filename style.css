@@ -91,7 +91,7 @@ svg.feather {
   background-color: #fff;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.03);
   z-index: 99; }
-  @media (max-width: 1199px) {
+  @media (max-width: 991px) {
     .navbar {
       max-height: 100vh;
       overflow-y: auto;
@@ -131,7 +131,7 @@ svg.feather {
     border-radius: 0.2rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     left: 0.5rem; }
-    @media (max-width: 1199px) {
+    @media (max-width: 991px) {
       .navbar .dropdown-menu {
         border: 0;
         margin: -0.2rem 0 0 0.5rem; } }
