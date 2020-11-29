@@ -256,6 +256,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
                 <# if (requirementOperator == '==') { valid = controllerValue != requirementValue ? 0 : 1; } #>
                 <# if (requirementOperator == 'contains') { valid = -1 == jQuery.inArray(controllerValue, requirementValue) ? 0 : 1; } #>
                 <#
+                (function($) {
                   $(document).on('change','select[data-field="'+requirementSetting+'"]',function() {
                     controllerValue = $(this).val();
                     if (requirementOperator == '==') { valid = controllerValue != requirementValue ? 0 : 1; }
@@ -263,6 +264,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
                     if (valid == 1) { $('.'+requiredClass).show(); }
                     if (valid == 0) { $('.'+requiredClass).hide(); }
                   });
+                })(jQuery);
                 #>
               <# } #>
             <# } #>
