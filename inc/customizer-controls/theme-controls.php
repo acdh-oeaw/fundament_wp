@@ -37,13 +37,13 @@ Kirki::add_config(
  */
 $sections = array(
 	'typography'      => array( esc_attr__( 'Typography', 'fundament_wp' ), '' ),
-	'navbar'      => array( esc_attr__( 'Top Navigation', 'fundament_wp' ), '' ),
 	'theme_layout'      => array( esc_attr__( 'Theme Layout', 'fundament_wp' ), '' ),
+	'navbar'      => array( esc_attr__( 'Top Navigation', 'fundament_wp' ), '' ),
 	'home_hero'      => array( esc_attr__( 'Homepage Hero Block', 'fundament_wp' ), '' ),
 	'home_blocks'      => array( esc_attr__( 'Homepage Content Blocks', 'fundament_wp' ), '' ),
 	'single_posts'      => array( esc_attr__( 'Single Posts', 'fundament_wp' ), '' ),
 	'archive_pages'      => array( esc_attr__( 'Archive Pages', 'fundament_wp' ), '' ),
-	'footer'      => array( esc_attr__( 'Footer', 'fundament_wp' ), '' ),
+	'footer'      => array( esc_attr__( 'Imprint and Footer', 'fundament_wp' ), '' ),
 );
 foreach ( $sections as $section_id => $section ) {
 	$section_args = array(
@@ -2283,6 +2283,34 @@ my_config_kirki_add_field(
 	)
 );
 
+/**
+ * Imprint Redmine Issue
+ */
+my_config_kirki_add_field(
+	array(
+		'type'        => 'text',
+		'settings'    => 'imprint_redmine_ID',
+		'label'       => esc_attr__( 'Imprint: Redmine issue ID', 'fundament_wp' ),
+		'description' => esc_attr__( 'Add the Redmine issue ID of your service to pull the imprint parameters from', 'fundament_wp' ),
+		'section'     => 'footer_section',
+		'default'     => 9945,
+		'transport'   => 'refresh',
+	)
+);
+
+/**
+ * Imprint Output Language
+ */
+my_config_kirki_add_field(
+	array(
+		'type'        => 'text',
+		'settings'    => 'imprint_output_lang',
+		'label'       => esc_attr__( 'Imprint Output Language', 'fundament_wp' ),
+		'description' => esc_attr__( 'Define in which language your imprint content should be. Use either en or de, or leave empty for content in both languages.', 'fundament_wp' ),
+		'section'     => 'footer_section',
+		'transport'   => 'refresh',
+	)
+);
 
 /**
  * Use Default Fundament Footer
