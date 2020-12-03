@@ -42,11 +42,12 @@ $kirki = kirki();
 // Instantiate the modules.
 $kirki->modules = new Kirki_Modules();
 
-Kirki::$url = plugins_url( '', __FILE__ );
-
 // Instantiate classes.
 new Kirki();
 new Kirki_L10n();
+
+Kirki::$url = get_template_directory_uri() . '/inc/customizer-controls';
+Kirki::$path = get_template_directory_uri() . '/inc/customizer-controls';
 
 // Include deprecated functions & methods.
 require_once wp_normalize_path( dirname( __FILE__ ) . '/deprecated/deprecated.php' );
