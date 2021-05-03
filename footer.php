@@ -11,9 +11,13 @@ $the_theme = wp_get_theme();
 $container = get_theme_mod( 'theme_layout_container', 'container' );
 ?>
 
+<?php get_sidebar( 'footerfundamentextended' ); ?>
+
 <?php get_sidebar( 'footerfull' ); ?>
 
 <?php get_sidebar( 'footersecondary' ); ?>
+
+
 
 </div><!-- #page we need this extra closing tag here -->
 

@@ -108,6 +108,16 @@ if ( ! function_exists( 'fundament_wp_widgets_init' ) ) {
 		    'before_title'   => '<h5 class="widget-title">', 
 		    'after_title'    => '</h5>', 
 		) );
+                
+                register_sidebar( array(
+			'name'          => __( 'Fundament Extended Footer', 'fundament_wp' ),
+			'id'            => 'footerfundamentextended',
+			'description'   => 'A fundament footer widget area below main content with a customizable middle section .',
+		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. fundament_wp_slbd_count_widgets( 'footerfundamentextended' ) .'">', 
+		    'after_widget'   => '</div><!-- .footer-widget -->', 
+		    'before_title'   => '<h5 class="widget-title">', 
+		    'after_title'    => '</h5>', 
+		) );
 
 	}
 } // endif function_exists( 'fundament_wp_widgets_init' ).
