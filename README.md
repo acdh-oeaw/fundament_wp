@@ -16,6 +16,7 @@
 - [What's included](#whats-included)
 - [Tips for creating your project website](#tips-for-creating-your-project-website)
 - [Recommended Plugins](#recommended-plugins)
+- [Fundament Footer with Editable center content](#fundament-extended-footer)
 
 
 ## Status
@@ -58,3 +59,11 @@ fundament_wp/
 - Shortcoder (https://wordpress.org/plugins/shortcoder/)
 - Insert Headers and Footers (https://wordpress.org/plugins/insert-headers-and-footers/)
 - WP Mail SMTP (https://de.wordpress.org/plugins/wp-mail-smtp/)
+
+## Fundament Extended Footer
+If you have to add extra info into the footer center area (for example: project partner logos), then you can use this footer.
+Steps:
+- Go to Appearance/Customize/Imprint and Footer and Turn off the "Use Fundament Footer"
+- Go to Appearance/Widgets
+- Drag and Drop a "text" or a "Custom HTML" widget inside the "Fundament Extended Footer" section
+
