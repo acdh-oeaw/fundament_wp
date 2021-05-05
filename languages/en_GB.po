@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-12-20 05:10+0000\n"
 "POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"PO-Revision-Date: 2021-05-05 15:49+0200\n"
+"PO-Revision-Date: 2021-05-05 16:33+0200\n"
 "Language-Team: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
@@ -721,10 +721,10 @@ msgstr ""
 
 #. FOOTER strings
 msgid "footer_contact"
-msgstr "Kapcsolat"
+msgstr "Contact"
 
 msgid "footer_acdh_text"
-msgstr "EN ACDH-CH<br>Austrian Centre for Digital Humanities<br>and Cultural Heritage<br>Austrian Academy of Sciences"
+msgstr "ACDH-CH<br>Austrian Centre for Digital Humanities<br>and Cultural Heritage<br>Austrian Academy of Sciences"
 
 msgid "footer_acdh_address"
 msgstr "Sonnenfelsgasse 19,<br>1010 Vienna"
