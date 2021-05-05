@@ -367,7 +367,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 								<label>
 									<# if ( field.label ) { #><span class="customize-control-title">{{{ field.label }}}</span><# } #>
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
-									<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'fundament_wp' ); ?>"  value="{{{ field.default }}}" data-field="{{{ field.id }}}" {{ defaultValue }} />
+									<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'fundamentwp' ); ?>"  value="{{{ field.default }}}" data-field="{{{ field.id }}}" {{ defaultValue }} />
 
 								</label>
 
@@ -384,22 +384,22 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
 								</label>
 
-								<figure class="kirki-image-attachment" data-placeholder="<?php esc_attr_e( 'No Image Selected', 'fundament_wp' ); ?>" >
+								<figure class="kirki-image-attachment" data-placeholder="<?php esc_attr_e( 'No Image Selected', 'fundamentwp' ); ?>" >
 									<# if ( field.default ) { #>
 										<# var defaultImageURL = ( field.default.url ) ? field.default.url : field.default; #>
 										<img src="{{{ defaultImageURL }}}">
 									<# } else { #>
-										<?php esc_attr_e( 'No Image Selected', 'fundament_wp' ); ?>
+										<?php esc_attr_e( 'No Image Selected', 'fundamentwp' ); ?>
 									<# } #>
 								</figure>
 
 								<div class="actions">
-									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"><?php esc_attr_e( 'Remove', 'fundament_wp' ); ?></button>
-									<button type="button" class="button upload-button" data-label=" <?php esc_attr_e( 'Add Image', 'fundament_wp' ); ?>" data-alt-label="<?php echo esc_attr_e( 'Change Image', 'fundament_wp' ); ?>" >
+									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"><?php esc_attr_e( 'Remove', 'fundamentwp' ); ?></button>
+									<button type="button" class="button upload-button" data-label=" <?php esc_attr_e( 'Add Image', 'fundamentwp' ); ?>" data-alt-label="<?php echo esc_attr_e( 'Change Image', 'fundamentwp' ); ?>" >
 										<# if ( field.default ) { #>
-											<?php esc_attr_e( 'Change Image', 'fundament_wp' ); ?>
+											<?php esc_attr_e( 'Change Image', 'fundamentwp' ); ?>
 										<# } else { #>
-											<?php esc_attr_e( 'Add Image', 'fundament_wp' ); ?>
+											<?php esc_attr_e( 'Add Image', 'fundamentwp' ); ?>
 										<# } #>
 									</button>
 									<# if ( field.default.id ) { #>
@@ -416,22 +416,22 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
 								</label>
 
-								<figure class="kirki-file-attachment" data-placeholder="<?php esc_attr_e( 'No File Selected', 'fundament_wp' ); ?>" >
+								<figure class="kirki-file-attachment" data-placeholder="<?php esc_attr_e( 'No File Selected', 'fundamentwp' ); ?>" >
 									<# if ( field.default ) { #>
 										<# var defaultFilename = ( field.default.filename ) ? field.default.filename : field.default; #>
 										<span class="file"><span class="dashicons dashicons-media-default"></span> {{ defaultFilename }}</span>
 									<# } else { #>
-										<?php esc_attr_e( 'No File Selected', 'fundament_wp' ); ?>
+										<?php esc_attr_e( 'No File Selected', 'fundamentwp' ); ?>
 									<# } #>
 								</figure>
 
 								<div class="actions">
 									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"></button>
-									<button type="button" class="button upload-button" data-label="<?php esc_attr_e( 'Add File', 'fundament_wp' ); ?>" data-alt-label="<?php esc_attr_e( 'Change File', 'fundament_wp' ); ?>">
+									<button type="button" class="button upload-button" data-label="<?php esc_attr_e( 'Add File', 'fundamentwp' ); ?>" data-alt-label="<?php esc_attr_e( 'Change File', 'fundamentwp' ); ?>">
 										<# if ( field.default ) { #>
-											<?php esc_attr_e( 'Change File', 'fundament_wp' ); ?>
+											<?php esc_attr_e( 'Change File', 'fundamentwp' ); ?>
 										<# } else { #>
-											<?php esc_attr_e( 'Add File', 'fundament_wp' ); ?>
+											<?php esc_attr_e( 'Add File', 'fundamentwp' ); ?>
 										<# } #>
 									</button>
 									<# if ( field.default.id ) { #>
@@ -451,7 +451,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 
 						</div>
 					<# }); #>
-					<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'fundament_wp' ); ?></button>
+					<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'fundamentwp' ); ?></button>
 				</div>
 			</li>
 		</script>

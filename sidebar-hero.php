@@ -23,7 +23,7 @@
 			    
 			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Previous', 'fundament_wp' ); ?></span>
+			    <span class="sr-only"><?php esc_html_e( 'Previous', 'fundamentwp' ); ?></span>
 			 
 			 </a>
 			 
@@ -31,7 +31,7 @@
 			    
 			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Next', 'fundament_wp' ); ?></span>
+			    <span class="sr-only"><?php esc_html_e( 'Next', 'fundamentwp' ); ?></span>
 			  
 			</a>
 

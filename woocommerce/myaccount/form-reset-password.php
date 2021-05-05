@@ -27,11 +27,11 @@ wc_print_notices(); ?>
 	<p><?php echo apply_filters( 'woocommerce_reset_password_message', __( 'Enter a new password below.', 'fundament_wp') ); ?></p>
 
 	<p class="woocommerce-FormRow woocommerce-FormRow--first form-row form-row-first">
-		<label for="password_1"><?php _e( 'New password', 'fundament_wp' ); ?> <span class="required">*</span></label>
+		<label for="password_1"><?php _e( 'New password', 'fundamentwp' ); ?> <span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_1" id="password_1" />
 	</p>
 	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-		<label for="password_2"><?php _e( 'Re-enter new password', 'fundament_wp' ); ?> <span class="required">*</span></label>
+		<label for="password_2"><?php _e( 'Re-enter new password', 'fundamentwp' ); ?> <span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_2" id="password_2" />
 	</p>
 
@@ -44,7 +44,7 @@ wc_print_notices(); ?>
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<input type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'fundament_wp' ); ?>" />
+		<input type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'fundamentwp' ); ?>" />
 	</p>
 
 	<?php wp_nonce_field( 'reset_password' ); ?>

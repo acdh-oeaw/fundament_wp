@@ -45,78 +45,78 @@ class Kirki_Control_Background extends Kirki_Control_Base {
 
 			<!-- background-color -->
 			<div class="background-color">
-				<h4><?php esc_attr_e( 'Background Color', 'fundament_wp' ); ?></h4>
+				<h4><?php esc_attr_e( 'Background Color', 'fundamentwp' ); ?></h4>
 				<input type="text" data-default-color="{{ data.default['background-color'] }}" data-alpha="true" value="{{ data.value['background-color'] }}" class="kirki-color-control"/>
 			</div>
 
 			<!-- background-image -->
 			<div class="background-image">
-				<h4><?php esc_attr_e( 'Background Image', 'fundament_wp' ); ?></h4>
+				<h4><?php esc_attr_e( 'Background Image', 'fundamentwp' ); ?></h4>
 				<div class="attachment-media-view background-image-upload">
 					<# if ( data.value['background-image'] ) { #>
 						<div class="thumbnail thumbnail-image"><img src="{{ data.value['background-image'] }}" alt="" /></div>
 					<# } else { #>
-						<div class="placeholder"><?php esc_attr_e( 'No File Selected', 'fundament_wp' ); ?></div>
+						<div class="placeholder"><?php esc_attr_e( 'No File Selected', 'fundamentwp' ); ?></div>
 					<# } #>
 					<div class="actions">
-						<button class="button background-image-upload-remove-button<# if ( ! data.value['background-image'] ) { #> hidden <# } #>"><?php esc_attr_e( 'Remove', 'fundament_wp' ); ?></button>
-						<button type="button" class="button background-image-upload-button"><?php esc_attr_e( 'Select File', 'fundament_wp' ); ?></button>
+						<button class="button background-image-upload-remove-button<# if ( ! data.value['background-image'] ) { #> hidden <# } #>"><?php esc_attr_e( 'Remove', 'fundamentwp' ); ?></button>
+						<button type="button" class="button background-image-upload-button"><?php esc_attr_e( 'Select File', 'fundamentwp' ); ?></button>
 					</div>
 				</div>
 			</div>
 
 			<!-- background-repeat -->
 			<div class="background-repeat">
-				<h4><?php esc_attr_e( 'Background Repeat', 'fundament_wp' ); ?></h4>
+				<h4><?php esc_attr_e( 'Background Repeat', 'fundamentwp' ); ?></h4>
 				<select {{{ data.inputAttrs }}}>
-					<option value="no-repeat"<# if ( 'no-repeat' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'No Repeat', 'fundament_wp' ); ?></option>
-					<option value="repeat"<# if ( 'repeat' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'Repeat All', 'fundament_wp' ); ?></option>
-					<option value="repeat-x"<# if ( 'repeat-x' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'Repeat Horizontally', 'fundament_wp' ); ?></option>
-					<option value="repeat-y"<# if ( 'repeat-y' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'Repeat Vertically', 'fundament_wp' ); ?></option>
+					<option value="no-repeat"<# if ( 'no-repeat' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'No Repeat', 'fundamentwp' ); ?></option>
+					<option value="repeat"<# if ( 'repeat' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'Repeat All', 'fundamentwp' ); ?></option>
+					<option value="repeat-x"<# if ( 'repeat-x' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'Repeat Horizontally', 'fundamentwp' ); ?></option>
+					<option value="repeat-y"<# if ( 'repeat-y' === data.value['background-repeat'] ) { #> selected <# } #>><?php esc_attr_e( 'Repeat Vertically', 'fundamentwp' ); ?></option>
 				</select>
 			</div>
 
 			<!-- background-position -->
 			<div class="background-position">
-				<h4><?php esc_attr_e( 'Background Position', 'fundament_wp' ); ?></h4>
+				<h4><?php esc_attr_e( 'Background Position', 'fundamentwp' ); ?></h4>
 				<select {{{ data.inputAttrs }}}>
-					<option value="left top"<# if ( 'left top' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Left Top', 'fundament_wp' ); ?></option>
-					<option value="left center"<# if ( 'left center' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Left Center', 'fundament_wp' ); ?></option>
-					<option value="left bottom"<# if ( 'left bottom' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Left Bottom', 'fundament_wp' ); ?></option>
-					<option value="right top"<# if ( 'right top' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Right Top', 'fundament_wp' ); ?></option>
-					<option value="right center"<# if ( 'right center' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Right Center', 'fundament_wp' ); ?></option>
-					<option value="right bottom"<# if ( 'right bottom' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Right Bottom', 'fundament_wp' ); ?></option>
-					<option value="center top"<# if ( 'center top' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Center Top', 'fundament_wp' ); ?></option>
-					<option value="center center"<# if ( 'center center' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Center Center', 'fundament_wp' ); ?></option>
-					<option value="center bottom"<# if ( 'center bottom' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Center Bottom', 'fundament_wp' ); ?></option>
+					<option value="left top"<# if ( 'left top' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Left Top', 'fundamentwp' ); ?></option>
+					<option value="left center"<# if ( 'left center' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Left Center', 'fundamentwp' ); ?></option>
+					<option value="left bottom"<# if ( 'left bottom' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Left Bottom', 'fundamentwp' ); ?></option>
+					<option value="right top"<# if ( 'right top' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Right Top', 'fundamentwp' ); ?></option>
+					<option value="right center"<# if ( 'right center' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Right Center', 'fundamentwp' ); ?></option>
+					<option value="right bottom"<# if ( 'right bottom' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Right Bottom', 'fundamentwp' ); ?></option>
+					<option value="center top"<# if ( 'center top' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Center Top', 'fundamentwp' ); ?></option>
+					<option value="center center"<# if ( 'center center' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Center Center', 'fundamentwp' ); ?></option>
+					<option value="center bottom"<# if ( 'center bottom' === data.value['background-position'] ) { #> selected <# } #>><?php esc_attr_e( 'Center Bottom', 'fundamentwp' ); ?></option>
 				</select>
 			</div>
 
 			<!-- background-size -->
 			<div class="background-size">
-				<h4><?php esc_attr_e( 'Background Size', 'fundament_wp' ); ?></h4>
+				<h4><?php esc_attr_e( 'Background Size', 'fundamentwp' ); ?></h4>
 				<div class="buttonset">
 					<input {{{ data.inputAttrs }}} class="switch-input screen-reader-text" type="radio" value="cover" name="_customize-bg-{{{ data.id }}}-size" id="{{ data.id }}cover" <# if ( 'cover' === data.value['background-size'] ) { #> checked="checked" <# } #>>
-						<label class="switch-label switch-label-<# if ( 'cover' === data.value['background-size'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}cover"><?php esc_attr_e( 'Cover', 'fundament_wp' ); ?></label>
+						<label class="switch-label switch-label-<# if ( 'cover' === data.value['background-size'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}cover"><?php esc_attr_e( 'Cover', 'fundamentwp' ); ?></label>
 					</input>
 					<input {{{ data.inputAttrs }}} class="switch-input screen-reader-text" type="radio" value="contain" name="_customize-bg-{{{ data.id }}}-size" id="{{ data.id }}contain" <# if ( 'contain' === data.value['background-size'] ) { #> checked="checked" <# } #>>
-						<label class="switch-label switch-label-<# if ( 'contain' === data.value['background-size'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}contain"><?php esc_attr_e( 'Contain', 'fundament_wp' ); ?></label>
+						<label class="switch-label switch-label-<# if ( 'contain' === data.value['background-size'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}contain"><?php esc_attr_e( 'Contain', 'fundamentwp' ); ?></label>
 					</input>
 					<input {{{ data.inputAttrs }}} class="switch-input screen-reader-text" type="radio" value="auto" name="_customize-bg-{{{ data.id }}}-size" id="{{ data.id }}auto" <# if ( 'auto' === data.value['background-size'] ) { #> checked="checked" <# } #>>
-						<label class="switch-label switch-label-<# if ( 'auto' === data.value['background-size'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}auto"><?php esc_attr_e( 'Auto', 'fundament_wp' ); ?></label>
+						<label class="switch-label switch-label-<# if ( 'auto' === data.value['background-size'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}auto"><?php esc_attr_e( 'Auto', 'fundamentwp' ); ?></label>
 					</input>
 				</div>
 			</div>
 
 			<!-- background-attachment -->
 			<div class="background-attachment">
-				<h4><?php esc_attr_e( 'Background Attachment', 'fundament_wp' ); ?></h4>
+				<h4><?php esc_attr_e( 'Background Attachment', 'fundamentwp' ); ?></h4>
 				<div class="buttonset">
 					<input {{{ data.inputAttrs }}} class="switch-input screen-reader-text" type="radio" value="scroll" name="_customize-bg-{{{ data.id }}}-attachment" id="{{ data.id }}scroll" <# if ( 'scroll' === data.value['background-attachment'] ) { #> checked="checked" <# } #>>
-						<label class="switch-label switch-label-<# if ( 'scroll' === data.value['background-attachment'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}scroll"><?php esc_attr_e( 'Scroll', 'fundament_wp' ); ?></label>
+						<label class="switch-label switch-label-<# if ( 'scroll' === data.value['background-attachment'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}scroll"><?php esc_attr_e( 'Scroll', 'fundamentwp' ); ?></label>
 					</input>
 					<input {{{ data.inputAttrs }}} class="switch-input screen-reader-text" type="radio" value="fixed" name="_customize-bg-{{{ data.id }}}-attachment" id="{{ data.id }}fixed" <# if ( 'fixed' === data.value['background-attachment'] ) { #> checked="checked" <# } #>>
-						<label class="switch-label switch-label-<# if ( 'fixed' === data.value['background-attachment'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}fixed"><?php esc_attr_e( 'Fixed', 'fundament_wp' ); ?></label>
+						<label class="switch-label switch-label-<# if ( 'fixed' === data.value['background-attachment'] ) { #>on <# } else { #>off<# } #>" for="{{ data.id }}fixed"><?php esc_attr_e( 'Fixed', 'fundamentwp' ); ?></label>
 					</input>
 				</div>
 			</div>

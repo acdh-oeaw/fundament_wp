@@ -32,10 +32,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
 				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php _e( 'Product', 'fundament_wp' ); ?></th>
-				<th class="product-price"><?php _e( 'Price', 'fundament_wp' ); ?></th>
-				<th class="product-quantity"><?php _e( 'Quantity', 'fundament_wp' ); ?></th>
-				<th class="product-subtotal"><?php _e( 'Total', 'fundament_wp' ); ?></th>
+				<th class="product-name"><?php _e( 'Product', 'fundamentwp' ); ?></th>
+				<th class="product-price"><?php _e( 'Price', 'fundamentwp' ); ?></th>
+				<th class="product-quantity"><?php _e( 'Quantity', 'fundamentwp' ); ?></th>
+				<th class="product-subtotal"><?php _e( 'Total', 'fundamentwp' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -75,7 +75,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'fundament_wp' ); ?>">
+						<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'fundamentwp' ); ?>">
 							<?php
 								if ( ! $product_permalink ) {
 									echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
@@ -93,13 +93,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'fundament_wp' ); ?>">
+						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'fundamentwp' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 							?>
 						</td>
 
-						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'fundament_wp' ); ?>">
+						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'fundamentwp' ); ?>">
 							<?php
 								if ( $_product->is_sold_individually() ) {
 									$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -116,7 +116,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							?>
 						</td>
 
-						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'fundament_wp' ); ?>">
+						<td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'fundamentwp' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 							?>
@@ -134,12 +134,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php if ( wc_coupons_enabled() ) { ?>
 						<div class="coupon">
-							<label for="coupon_code"><?php _e( 'Coupon:', 'fundament_wp' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'fundament_wp' ); ?>" /> <input type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'fundament_wp' ); ?>" />
+							<label for="coupon_code"><?php _e( 'Coupon:', 'fundamentwp' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'fundamentwp' ); ?>" /> <input type="submit" class="btn btn-outline-primary" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'fundamentwp' ); ?>" />
 							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 						</div>
 					<?php } ?>
 
-				<input type="submit" class="btn btn-outline-primary"  name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'fundament_wp' ); ?>" />
+				<input type="submit" class="btn btn-outline-primary"  name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'fundamentwp' ); ?>" />
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

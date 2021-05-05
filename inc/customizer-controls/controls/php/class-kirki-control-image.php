@@ -46,13 +46,13 @@ class Kirki_Control_Image extends Kirki_Control_Base {
 
 		data.choices.labels = _.isObject( data.choices.labels ) ? data.choices.labels : {};
 		data.choices.labels = _.defaults( data.choices.labels, {
-			select: '<?php esc_attr_e( 'Select image', 'fundament_wp' ); ?>',
-			change: '<?php esc_attr_e( 'Change image', 'fundament_wp' ); ?>',
-			'default': '<?php esc_attr_e( 'Default', 'fundament_wp' ); ?>',
-			remove: '<?php esc_attr_e( 'Remove', 'fundament_wp' ); ?>',
-			placeholder: '<?php esc_attr_e( 'No image selected', 'fundament_wp' ); ?>',
-			frame_title: '<?php esc_attr_e( 'Select image', 'fundament_wp' ); ?>',
-			frame_button: '<?php esc_attr_e( 'Choose image', 'fundament_wp' ); ?>',
+			select: '<?php esc_attr_e( 'Select image', 'fundamentwp' ); ?>',
+			change: '<?php esc_attr_e( 'Change image', 'fundamentwp' ); ?>',
+			'default': '<?php esc_attr_e( 'Default', 'fundamentwp' ); ?>',
+			remove: '<?php esc_attr_e( 'Remove', 'fundamentwp' ); ?>',
+			placeholder: '<?php esc_attr_e( 'No image selected', 'fundamentwp' ); ?>',
+			frame_title: '<?php esc_attr_e( 'Select image', 'fundamentwp' ); ?>',
+			frame_button: '<?php esc_attr_e( 'Choose image', 'fundamentwp' ); ?>',
 		} );
 		#>
 		<label>

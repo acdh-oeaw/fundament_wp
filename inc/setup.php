@@ -24,9 +24,12 @@ if ( ! function_exists( 'fundament_wp_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on fundament_wp, use a find and replace
-		 * to change 'fundament_wp' to the name of your theme in all the template files
+		 * to change 'fundamentwp' to the name of your theme in all the template files
+                 * UPDATE 05.05.2021 the theme name is fundament_wp but the language functions
+                 * can't handle the _ so please use the name like 'fundamentwp'
+                 * And you have to use the hu_HU.mo name inside the theme/languages dir
 		 */
-		load_theme_textdomain( 'fundament_wp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'fundamentwp', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );

@@ -739,3 +739,30 @@ msgstr[1] ""
 #. Name of the theme
 msgid "fundament_wp"
 msgstr ""
+
+
+#. FOOTER strings
+msgid "footer_contact"
+msgstr "Contact"
+
+msgid "footer_acdh_text"
+msgstr "ACDH-CH<br>Austrian Centre for Digital Humanities<br>and Cultural Heritage<br>Austrian Academy of Sciences"
+
+msgid "footer_acdh_address"
+msgstr "Sonnenfelsgasse 19,<br>1010 Vienna"
+
+msgid "footer_tel"
+msgstr "+43 1 51581-2200"
+
+msgid "footer_email"
+msgstr "acdh@oeaw.ac.at"
+
+msgid "footer_helpdesk"
+msgstr "HELPDESK"
+
+msgid "footer_helpdesk_text"
+msgstr "ACDH-CH runs a helpdesk offering advice for questions related to various digital humanities topics."
+
+msgid "footer_ask_usk"
+msgstr "ASK US!"
+

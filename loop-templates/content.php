@@ -52,7 +52,7 @@ $articleClasses = array(
     		?>
 
         <?php if (fundament_wp_get_theme_mod( 'card_readmore_toggle' )) { ?>
-          <a class="btn btn-round mb-1" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>"><?php echo __( 'Read More','fundament_wp' ); ?></a>
+          <a class="btn btn-round mb-1" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>"><?php echo __( 'Read More','fundamentwp' ); ?></a>
         <?php } ?>
 
     		<?php

@@ -13,7 +13,7 @@
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'fundament_wp' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'fundamentwp' ); ?></h1>
 
 	</header><!-- .page-header -->
 
@@ -30,12 +30,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'fundament_wp' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'fundamentwp' ); ?></p>
 			<?php
 				get_search_form();
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'fundament_wp' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'fundamentwp' ); ?></p>
 			<?php
 				get_search_form();
 		endif; ?>

@@ -90,7 +90,7 @@ if ( ! function_exists( 'fundament_wp_post_nav' ) ) :
 		}
 		?>
 				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php _e( 'Post navigation', 'fundament_wp' ); ?></h2>
+					<h2 class="sr-only"><?php _e( 'Post navigation', 'fundamentwp' ); ?></h2>
 					<div class="row nav-links justify-content-between">
 						<?php
 

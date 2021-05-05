@@ -30,7 +30,7 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
       <div class="wrapper fundament-default-footer" id="wrapper-footer-full">
         <div class="'. esc_attr( $container ) .'" id="footer-full-content" tabindex="-1">
           <div class="footer-separator">
-            <i data-feather="message-circle"></i> CONTACT
+            <i data-feather="message-circle"></i> '.__( 'footer_contact', 'fundamentwp' ).'
           </div>
           <div class="row">
             <div class="footer-widget col-lg-1 col-md-2 col-sm-2 col-xs-6 col-3">
@@ -41,30 +41,24 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
             <div class="footer-widget col-lg-4 col-md-4 col-sm-6 col-9">
               <div class="textwidget custom-html-widget">
                 <p>
-                  ACDH-CH
-                  <br>
-                  Austrian Centre for Digital Humanities <br/> and Cultural Heritage
-                  <br>
-                  Austrian Academy of Sciences
+                  '.__( 'footer_acdh_text', 'fundamentwp' ).'
                 </p>
                 <p>
-                  Sonnenfelsgasse 19,
-                  <br>
-                  1010 Vienna
+                 '.__( 'footer_acdh_address', 'fundamentwp' ).'
                 </p>
                 <p>
-                  T: +43 1 51581-2200
+                  T: '.__( 'footer_tel', 'fundamentwp' ).'
                   <br>
-                  E: <a href="mailto:acdh@oeaw.ac.at">acdh@oeaw.ac.at</a>
+                  E: <a href="mailto:'.__( 'footer_email', 'fundamentwp' ).'">'.__( 'footer_email', 'fundamentwp' ).'</a>
                 </p>
               </div>
             </div><!-- .footer-widget -->
             <div class="footer-widget col-lg-3 col-md-4 col-sm-4 ml-auto">
               <div class="textwidget custom-html-widget">
-                <h6>HELPDESK</h6>
-                <p>ACDH-CH runs a helpdesk offering advice for questions related to various digital humanities topics.</p>
+                <h6>'.__( 'footer_helpdesk', 'fundamentwp' ).'</h6>
+                <p>'.__( 'footer_helpdesk_text', 'fundamentwp' ).'</p>
                 <p>
-                  <a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">ASK US!</a>
+                  <a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">'.__( 'footer_ask_usk', 'fundamentwp' ).'</a>
                 </p>
               </div>
             </div><!-- .footer-widget -->

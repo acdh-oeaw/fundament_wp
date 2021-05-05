@@ -32,7 +32,7 @@ $navbar_placement = get_theme_mod( 'navbar_placement' );
 	<!-- ******************* The Navbar Area ******************* -->
 <div class="wrapper-fluid wrapper-navbar <?php echo $navbar_placement; ?>" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'fundament_wp' ); ?></a>
+		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'fundamentwp' ); ?></a>
 
 		<nav class="navbar navbar-expand-lg <?php echo $navbar_color_scheme; ?>">
 
@@ -69,7 +69,7 @@ $navbar_placement = get_theme_mod( 'navbar_placement' );
           <?php $navbar_search_toggle = fundament_wp_get_theme_mod( 'navbar_search_toggle', false );
             if ($navbar_search_toggle) { ?>
             <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-              <input class="form-control navbar-search" id="s" name="s" type="text" placeholder="<?php esc_attr_e( 'Search', 'fundament_wp' ); ?>" value="<?php the_search_query(); ?>" autocomplete="off">
+              <input class="form-control navbar-search" id="s" name="s" type="text" placeholder="<?php esc_attr_e( 'Search', 'fundamentwp' ); ?>" value="<?php the_search_query(); ?>" autocomplete="off">
               <button type="submit" class="navbar-search-icon">
                 <i data-feather="search"></i>
               </button>

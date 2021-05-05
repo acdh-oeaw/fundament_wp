@@ -49,7 +49,7 @@ $col    = 1;
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'fundament_wp' ); ?></a>
+			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'fundamentwp' ); ?></a>
 		</header>
 		<address>
 			<?php
@@ -68,7 +68,7 @@ $col    = 1;
 				$formatted_address = WC()->countries->get_formatted_address( $address );
 
 				if ( ! $formatted_address )
-					_e( 'You have not set up this type of address yet.', 'fundament_wp' );
+					_e( 'You have not set up this type of address yet.', 'fundamentwp' );
 				else
 					echo $formatted_address;
 			?>

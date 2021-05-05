@@ -38,7 +38,7 @@ function fundament_wp_entry_meta($avatar = false, $author = false, $postdate = f
     $words = str_word_count(strip_tags($postcontent));
     $mins = floor($words / 200);
     if ($mins < 1) { $mins = '1'; }
-    $estimated = $mins . __( ' min', 'fundament_wp' ) . __( ' read', 'fundament_wp' );
+    $estimated = $mins . __( ' min', 'fundament_wp' ) . __( ' read', 'fundamentwp' );
     if (!empty($postdate)) { $readingtime = sprintf('<span class="reading-time"><span class="dot"></span>'); } else { $readingtime = '<span class="reading-time">'; }
   	$readingtime .= sprintf(
   		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $estimated . '</a></span>'
