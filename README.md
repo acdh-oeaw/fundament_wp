@@ -60,6 +60,7 @@ fundament_wp/
 - Insert Headers and Footers (https://wordpress.org/plugins/insert-headers-and-footers/)
 - WP Mail SMTP (https://de.wordpress.org/plugins/wp-mail-smtp/)
 - Polylang Multilanguage plugin (https://wordpress.org/plugins/polylang/)
+- ACDHCH GNU Mailman Newsletter subscribe widget (https://github.com/acdh-oeaw/fundament_wp_mailman)
 
 ## Fundament Extended Footer
 If you have to add extra info into the footer center area (for example: project partner logos), then you can use this footer.
