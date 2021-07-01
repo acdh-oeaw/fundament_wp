@@ -17,6 +17,7 @@
 - [Tips for creating your project website](#tips-for-creating-your-project-website)
 - [Recommended Plugins](#recommended-plugins)
 - [Fundament Footer with Editable center content](#fundament-extended-footer)
+- [HERO Text Translate](#hero-text-translate)
 
 
 ## Status
@@ -69,3 +70,9 @@ Steps:
 - Go to Appearance/Widgets
 - Drag and Drop a "text" or a "Custom HTML" widget inside the "Fundament Extended Footer" section
 
+## HERO Text Translate
+You can also translate the hero static text, for this you need to do the following steps:
+- Install and enable Polylang plugin.((https://wordpress.org/plugins/polylang/))
+- Open Theme Customization/Homepage Hero Block and here check the "Hero Title translation" checkbox. Publish the changes.
+- Now under the Admin/Languages/String translations you can find the 'fundament_wp_hero_dynamic_title' translation section.
+ In this section you can find all the available languages from your site and you can translate them.

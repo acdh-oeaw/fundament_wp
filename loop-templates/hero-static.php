@@ -21,7 +21,6 @@ $hero_text_translate = get_theme_mod('hero_static_title_translate');
     <div class="<?php echo esc_attr($container); ?> <?php echo esc_attr($hero_color_scheme); ?>" id="wrapper-hero-inner" tabindex="-1">
 
         <?php
-        echo is_plugin_active('polylang/polylang.php');
         if ($hero_static_title) {
             if ($hero_text_translate && is_plugin_active('polylang/polylang.php')) {
                 ?>
