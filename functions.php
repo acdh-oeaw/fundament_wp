@@ -74,3 +74,8 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+//if we have the polylang plugin installed then we can add the theme related translations
+if(is_plugin_active('polylang/polylang.php') && function_exists('pll_register_string')) {
+    pll_register_string(get_theme_mod('hero_static_title'), 'fundament_wp_hero_dynamic_title', 'fundament_wp');
+}
