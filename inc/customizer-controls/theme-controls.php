@@ -974,8 +974,8 @@ if (is_plugin_active('polylang/polylang.php')) {
             array(
                 'type' => 'checkbox',
                 'settings' => 'hero_static_title_translate',
-                'label' => esc_attr__('Hero Title Translation', 'fundament_wp'),
-                'description' => esc_attr__('Turn on if you are using multilanguage site.', 'fundament_wp'),
+                'label' => esc_attr__('Hero Section Translation', 'fundament_wp'),
+                'description' => esc_attr__('Turn on if you are using multilanguage site and then you can translate the title, text and button.', 'fundament_wp'),
                 'section' => 'home_hero_section',
                 'transport' => 'refresh',
                 'required' => array(
