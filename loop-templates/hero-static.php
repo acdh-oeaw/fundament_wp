@@ -22,46 +22,46 @@ $polylang_active = is_plugin_active('polylang/polylang.php');
     <div class="<?php echo esc_attr($container); ?> <?php echo esc_attr($hero_color_scheme); ?>" id="wrapper-hero-inner" tabindex="-1">
 
         <?php
-        if ($hero_static_title) {
-            if ($hero_text_translate && $polylang_active) {
-                ?>
-                <h1><?php pll_esc_attr_e('fundament_wp_hero_dynamic_title'); ?></h1>
-                <?php
-            } else {
-                ?>
-                <h1>
-                    <?php echo esc_attr($hero_static_title); ?>
-                </h1>
-            <?php } ?>
+        if ($hero_text_translate && $polylang_active) {
+            ?>
+            <h1><?php pll_esc_attr_e('fundament_wp_hero_dynamic_title'); ?></h1>
+            <?php
+        } else if ($hero_static_title) {
+            ?>
+            <h1>
+                <?php echo esc_attr($hero_static_title); ?>
+            </h1>
+            <?php
+        }
+        
+        if ($hero_text_translate && $polylang_active) {
+            ?>
+            <p><?php pll_esc_attr_e('fundament_wp_hero_dynamic_text'); ?></p>
+            <?php
+        } else if ($hero_static_text) {
+            ?>
+            <p>
+                <?php echo esc_attr($hero_static_text); ?>
+            </p>
         <?php } ?>
-        <?php
-        if ($hero_static_text) {
-            if ($hero_static_text && $polylang_active) {
-                ?>
-                <p><?php pll_esc_attr_e('fundament_wp_hero_dynamic_text'); ?></p>
-                <?php
-            } else {
-                ?>
-                <p>
-                    <?php echo esc_attr($hero_static_text); ?>
-                </p>
-            <?php } ?>
 
-        <?php } ?>
-        <?php if ($hero_button) { ?>
+        <?php if ($hero_text_translate && $polylang_active) { ?>
             <?php if ($hero_static_url) { ?>
-                <a href="<?php echo esc_url($hero_static_url); ?>"><?php } ?>
-                <?php if ($hero_button && $polylang_active) { ?>
-                    <button class="btn btn-round"><?php pll_esc_attr_e('fundament_wp_hero_dynamic_button'); ?></button>
-                    <?php
-                } else {
-                    ?>
-                    <button class="btn btn-round"><?php echo esc_attr($hero_button); ?></button>
-                <?php } ?>    
-                    
-                    <?php if ($hero_static_url) { ?>
-                    </a><?php } ?>
+                <a href="<?php echo esc_url($hero_static_url); ?>">
             <?php } ?>
+                <button class="btn btn-round"><?php pll_esc_attr_e('fundament_wp_hero_dynamic_button'); ?></button>
+            <?php if ($hero_static_url) { ?>
+                </a>
+            <?php } ?>
+        <?php } else if ($hero_button) { ?>
+            <?php if ($hero_static_url) { ?>
+                <a href="<?php echo esc_url($hero_static_url); ?>">
+            <?php } ?>
+                <button class="btn btn-round"><?php echo esc_attr($hero_button); ?></button>
+            <?php if ($hero_static_url) { ?>
+                </a>
+            <?php } ?>
+        <?php } ?>
 
     </div>
 
