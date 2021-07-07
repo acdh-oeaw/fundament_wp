@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4"
-    }
+    },
     "authors": [
         {
             "name": "Norbert Czirjak",
