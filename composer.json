@@ -4,6 +4,9 @@
     "type": "wordpress-theme",
     "homepage": "https://github.com/acdh-oeaw/fundament_wp",
     "license": "MIT",
+    "require": {
+        "php": ">=7.4"
+    }
     "authors": [
         {
             "name": "Norbert Czirjak",
