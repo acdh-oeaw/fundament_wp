@@ -1,0 +1,13 @@
+{
+    "name": "acdh-oeaw/fundament_wp",
+    "description": "A starter HTML, CSS, and JavaScript framework/guideline for ACDH web applications, as a WordPress theme.",
+    "type": "wordpress-theme",
+    "homepage": "https://github.com/acdh-oeaw/fundament_wp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Norbert Czirjak",
+            "email": "norbert.czirjak@oeaw.ac.at"
+        }
+    ]
+}
