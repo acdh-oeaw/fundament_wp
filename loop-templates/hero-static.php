@@ -22,7 +22,7 @@ $polylang_active = is_plugin_active('polylang/polylang.php');
     <div class="<?php echo esc_attr($container); ?> <?php echo esc_attr($hero_color_scheme); ?>" id="wrapper-hero-inner" tabindex="-1">
 
         <?php
-        if ($hero_text_translate && $polylang_active) {
+        if ($hero_text_translate && $polylang_active && pll__('fundament_wp_hero_dynamic_title') != 'fundament_wp_hero_dynamic_title') {
             ?>
             <h1><?php pll_esc_attr_e('fundament_wp_hero_dynamic_title'); ?></h1>
             <?php
@@ -34,7 +34,7 @@ $polylang_active = is_plugin_active('polylang/polylang.php');
             <?php
         }
         
-        if ($hero_text_translate && $polylang_active) {
+        if ($hero_text_translate && $polylang_active && pll__('fundament_wp_hero_dynamic_text') != 'fundament_wp_hero_dynamic_text') {
             ?>
             <p><?php pll_esc_attr_e('fundament_wp_hero_dynamic_text'); ?></p>
             <?php
@@ -45,7 +45,7 @@ $polylang_active = is_plugin_active('polylang/polylang.php');
             </p>
         <?php } ?>
 
-        <?php if ($hero_text_translate && $polylang_active) { ?>
+        <?php if ($hero_text_translate && $polylang_active && pll__('fundament_wp_hero_dynamic_button') != 'fundament_wp_hero_dynamic_button') { ?>
             <?php if ($hero_static_url) { ?>
                 <a href="<?php echo esc_url($hero_static_url); ?>">
             <?php } ?>
