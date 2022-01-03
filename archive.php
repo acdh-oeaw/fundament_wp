@@ -29,7 +29,7 @@ $container   = get_theme_mod( 'theme_layout_container', 'container' );
 
 					<header class="page-header">
 						<?php
-						the_archive_title( '<h2 class="page-title">'.$term_rss_link, '</h2>' );
+						the_archive_title();
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
 					</header><!-- .page-header -->
