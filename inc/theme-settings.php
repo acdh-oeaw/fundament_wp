@@ -35,7 +35,7 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
           <div class="row">
             <div class="footer-widget col-lg-1 col-md-2 col-sm-2 col-xs-6 col-3">
               <div class="textwidget custom-html-widget">
-                <a href="/"><img src="https://fundament.acdh.oeaw.ac.at/common-assets/images/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo"></a>
+                <a href="https://www.oeaw.ac.at/acdh/"><img src="https://fundament.acdh.oeaw.ac.at/common-assets/images/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo"></a>
               </div>
             </div><!-- .footer-widget -->
             <div class="footer-widget col-lg-4 col-md-4 col-sm-6 col-9">
