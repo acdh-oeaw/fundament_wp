@@ -749,7 +749,7 @@ msgid "footer_acdh_text"
 msgstr "ACDH-CH<br>Austrian Centre for Digital Humanities<br>and Cultural Heritage<br>Austrian Academy of Sciences"
 
 msgid "footer_acdh_address"
-msgstr "Sonnenfelsgasse 19,<br>1010 Vienna"
+msgstr "Bäckerstraße 13,<br>1010 Vienna"
 
 msgid "footer_tel"
 msgstr "+43 1 51581-2200"
