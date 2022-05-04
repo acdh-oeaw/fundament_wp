@@ -44,7 +44,7 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
                   '.__( 'footer_acdh_text', 'fundamentwp' ).'
                 </p>
                 <p>
-                 '.__( 'footer_acdh_address', 'fundamentwp' ).'
+                 '.__( 'footer_acdh_address_backer', 'fundamentwp' ).'
                 </p>
                 <p>
                   T: '.__( 'footer_tel', 'fundamentwp' ).'
@@ -58,7 +58,7 @@ if ( ! function_exists( 'fundament_wp_add_fundament_default_footer' ) ) {
                 <h6>'.__( 'footer_helpdesk', 'fundamentwp' ).'</h6>
                 <p>'.__( 'footer_helpdesk_text', 'fundamentwp' ).'</p>
                 <p>
-                  <a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">'.__( 'footer_ask_usk', 'fundamentwp' ).'</a>
+                  <a class="helpdesk-button" href="mailto:acdh-ch-helpdesk@oeaw.ac.at">'.__( 'footer_ask_usk', 'fundamentwp' ).'</a>
                 </p>
               </div>
             </div><!-- .footer-widget -->
