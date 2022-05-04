@@ -755,7 +755,7 @@ msgid "footer_tel"
 msgstr "+43 1 51581-2200"
 
 msgid "footer_email"
-msgstr "acdh@oeaw.ac.at"
+msgstr "acdh-ch@oeaw.ac.at"
 
 msgid "footer_helpdesk"
 msgstr "HELPDESK"
@@ -766,3 +766,5 @@ msgstr "ACDH-CH runs a helpdesk offering advice for questions related to various
 msgid "footer_ask_usk"
 msgstr "ASK US!"
 
+msgid "footer_acdh_address_backer"
+msgstr "Bäckerstraße 13,<br>1010 Wien"
