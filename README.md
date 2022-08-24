@@ -18,6 +18,7 @@
 - [Recommended Plugins](#recommended-plugins)
 - [Fundament Footer with Editable center content](#fundament-extended-footer)
 - [HERO Static Section Translate](#hero-static-section-translate)
+- [Imprint](#imprint)
 
 
 ## Status
@@ -77,3 +78,7 @@ You can also translate the hero static title, text and button. For this you need
 - Now under the Admin/Languages/String translations you can find the 'fundament_wp_hero_dynamic_title', 'fundament_wp_hero_dynamic_text'
 and the 'fundament_wp_hero_dynamic_button' translation sections.
  In these sections you can find all the available languages from your site and you can translate them.
+ 
+ ## Imprint
+ - Under you redmine issue, please fill the ImprintParams and then go to your theme settings/Imprint and Footer/Imprint: Redmine issue ID. Here add your redmine issue id. 
+ - Add a new page called Imprint and in the right block side under the Page/Template, select the Imprint Page template and save it.
