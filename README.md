@@ -19,6 +19,7 @@
 - [Fundament Footer with Editable center content](#fundament-extended-footer)
 - [HERO Static Section Translate](#hero-static-section-translate)
 - [Imprint](#imprint)
+- [Matomo](#matomo)
 
 
 ## Status
@@ -82,3 +83,6 @@ and the 'fundament_wp_hero_dynamic_button' translation sections.
  ## Imprint
  - Under you redmine issue, please fill the ImprintParams and then go to your theme settings/Imprint and Footer/Imprint: Redmine issue ID. Here add your redmine issue id. 
  - Add a new page called Imprint and in the right block side under the Page/Template, select the Imprint Page template and save it.
+
+## Matomo
+- Go to your theme settings/Imprint and Footer menupoint, and here you can find the Matomo ID. Please enter your Matomo Id and press the Publish button.

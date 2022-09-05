@@ -2304,6 +2304,21 @@ my_config_kirki_add_field(
 );
 
 /**
+ * Matomo ID
+ */
+my_config_kirki_add_field(
+        array(
+            'type' => 'text',
+            'settings' => 'Matomo_ID',
+            'label' => esc_attr__('Matomo ID', 'fundament_wp'),
+            'description' => esc_attr__('Add the Matomo ID for the ACDH-CH matomo server connection', 'fundament_wp'),
+            'section' => 'footer_section',
+            'default' => 0,
+            'transport' => 'refresh',
+        )
+);
+
+/**
  * Imprint Redmine Issue
  */
 my_config_kirki_add_field(
